@@ -4,9 +4,13 @@ using UnityEngine.Networking;
 
 public static class NetworkManager
 {
-    public static IEnumerator SendRequest()
+    public static IEnumerator NextQuestion(int NextEventID)
     {
-        UnityWebRequest www = UnityWebRequest.Get("http://192.168.0.193:8080/get_next_question?current_id=0&question_id=0&response_id=0");
+        string request = string.Format(
+            "http://35.238.231.226:8080/get_event?id={0}",
+            NextEventID);
+
+        UnityWebRequest www = UnityWebRequest.Get(request);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -15,11 +19,7 @@ public static class NetworkManager
         }
         else
         {
-            // Show results as text
-            Debug.Log(www.downloadHandler.text);
-
-            // Or retrieve results as binary data
-            byte[] results = www.downloadHandler.data;
+            AnimationController.CurrentEvent = Event.LoadFromJSON(www.downloadHandler.text);
         }
     }
 }

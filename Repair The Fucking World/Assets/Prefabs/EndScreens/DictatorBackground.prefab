@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7432477967644887874}
   m_Layer: 0
   m_Name: DictatorBackground
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4f233756b1c47f14d919f6bba5b487ea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 79e488d8ec73b184c8a29a365fa96716, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
