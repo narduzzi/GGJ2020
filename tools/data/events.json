@@ -19,20 +19,22 @@
                         "next_event_title": "",
                         "solution": "Vous avez lanc\u00e9 la partie",
                         "type": "good",
-                        "next_event_id": 1
+                        "next_event_id": 13
                     },
                     {
                         "text": "Je lance la partie",
                         "next_event_title": "",
                         "solution": "Vous avez lanc\u00e9 la partie",
                         "type": "good",
-                        "next_event_id": 1
+                        "next_event_id": 13
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
+        "next_ids": [
+            13
+        ],
         "previous_ids": [],
         "id": 0
     },
@@ -459,7 +461,7 @@
     {
         "theme": "BigBang",
         "event": "Big Bang",
-        "date": "-10000",
+        "date": "-400000000",
         "description": "",
         "questions": [
             {
@@ -665,5 +667,75 @@
         "next_ids": [],
         "previous_ids": [],
         "id": 18
+    },
+    {
+        "theme": "Antiquit\u00e9",
+        "event": "Chute de l\u2019empire romain d\u2019occident",
+        "date": "476",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous \u00eates dans un bureau moyen\u00e2geux face \u00e0 un homme \u00e0 l'allure noble. Il vous dit pr\u00e9voir de commercer avec un peuple barbare proche et demande votre avis sur la question. Que r\u00e9pondez-vous ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Des Commercer avec barbares ?!\\n Jamais de la vie !",
+                        "next_event_title": "Fin dictateur",
+                        "solution": "Il s'agissait de  Romulus Augustule suppos\u00e9 \u00eatre le dernier empereur de l'empire romain d'occident.\n\nGr\u00e2ce \u00e0 vos bons conseils, l'empire ne chute pas et prosp\u00e8re ind\u00e9finiment.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Qu\u2019en sais-je.. ? Je suppose que c\u2019est un bon deal.",
+                        "next_event_title": "Christophe Colomb d\u00e9couvre l\u2019Am\u00e9rique",
+                        "solution": "L'homme suit vos conseils. Quelques ann\u00e9es plus tard, il regrettera ce choix qui a fait \u00e9crouler son empire.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 19
+    },
+    {
+        "theme": "Moyen-\u00c2ge",
+        "event": "Christophe Colomb d\u00e9couvre l\u2019Am\u00e9rique",
+        "date": "1492",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous apparaissez sur un fier bateau voguant sur un oc\u00e9an d\u00e9cha\u00een\u00e9. L\u2019\u00e9quipage semble en difficult\u00e9. Que d\u00e9cidez-vous de faire ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je ne veux pas couler avec eux. Je les aides \u00e0 s\u2019en sortir !",
+                        "next_event_title": "R\u00e9forme de Martin Luther en Allemagne",
+                        "solution": "Gr\u00e2ce \u00e0 vous, le navire sort de la temp\u00eate et atteint de nouvelles terres inexplor\u00e9es jusqu\u2019alors.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je pr\u00e9f\u00e8re les laisser et m\u2019en vais \u00e0 l'\u00e9v\u00e8nement suivant.",
+                        "next_event_title": "Fin Chaotique",
+                        "solution": "En vous en allant, vous voyez le navire couler et son \u00e9quipage p\u00e9rir. \n\nSuite \u00e0 votre action, Christophe Colomb ne d\u00e9couvre pas l'Am\u00e9rique.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 20
     }
 ]
