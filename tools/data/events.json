@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "theme": "BigBang"
+  },
+  {
+    "id": 1,
+    "theme": "Prehistory"
+  },
+  {
+    "id": 2,
+    "theme": "Middle Age"
+  },
+  {
+    "id": 3,
+    "theme": "Modern Age"
+  },
+  {
+    "id": 4,
+    "theme": "Contemporary"
+  }
+]
