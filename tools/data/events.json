@@ -2,11 +2,13 @@
     {
         "theme": "Nature",
         "event_title": "Fin utopique",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
-            2
+            2,
+            14,
+            20
         ],
         "id": -8,
         "next_ids": []
@@ -14,7 +16,7 @@
     {
         "theme": "Futur",
         "event_title": "Fin futuriste",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [],
@@ -24,7 +26,7 @@
     {
         "theme": "Futur",
         "event_title": "Fin Windows Vista",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
@@ -36,7 +38,7 @@
     {
         "theme": "Chaos",
         "event_title": "Fin normale",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
@@ -48,11 +50,13 @@
     {
         "theme": "Chaos",
         "event_title": "Fin triste",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
-            13
+            9,
+            13,
+            15
         ],
         "id": -4,
         "next_ids": []
@@ -60,11 +64,12 @@
     {
         "theme": "Chaos",
         "event_title": "Fin dictatorial",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
-            7
+            7,
+            19
         ],
         "id": -3,
         "next_ids": []
@@ -72,12 +77,15 @@
     {
         "theme": "Nature",
         "event_title": "Fin nature",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
             1,
-            3
+            3,
+            16,
+            17,
+            18
         ],
         "id": -2,
         "next_ids": []
@@ -85,7 +93,7 @@
     {
         "theme": "Chaos",
         "event_title": "Fin chaotique",
-        "date": 4000000000,
+        "date": 10000,
         "description": "",
         "tag": "end",
         "previous_ids": [
@@ -93,7 +101,8 @@
             5,
             6,
             10,
-            11
+            11,
+            12
         ],
         "id": -1,
         "next_ids": []
@@ -217,7 +226,9 @@
             -8,
             6
         ],
-        "previous_ids": [],
+        "previous_ids": [
+            20
+        ],
         "id": 2
     },
     {
@@ -257,7 +268,9 @@
             4,
             -2
         ],
-        "previous_ids": [],
+        "previous_ids": [
+            18
+        ],
         "id": 3
     },
     {
@@ -489,19 +502,24 @@
                         "text": "Je me fais discret et ne bouge pas",
                         "next_event_title": "Pomp\u00e9i ensevelie sous le v\u00e9suve",
                         "solution": "Vous vous laissez donc marcher dessus. L'homme semble alors, gr\u00e2ce \u00e0 vous, marcher sur l'eau. Vous apprendrez plus tard que des t\u00e9moins ont rapport\u00e9 ce ph\u00e9nom\u00e8ne et que l'homme en question est devenu c\u00e9l\u00e8bre gr\u00e2ce \u00e0 \u00e7a.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 12
                     },
                     {
                         "text": "Il se prend pour qui lui ?\\n Je m\u2019empresse de le faire tomber dans l\u2019eau !",
                         "next_event_title": "Fin chaotique",
                         "solution": "Vous saisissez alors la sandale ainsi que l'homme y \u00e9tant rattach\u00e9 et faites tomber le tout dans l'eau. Vous apprenez plus tard que cet homme pr\u00e9tendait \u00eatre capable de marcher sur l'eau.\n\nSuite \u00e0 votre action, le Christianisme n'est pas cr\u00e9\u00e9.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -4
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
+        "next_ids": [
+            12,
+            -4
+        ],
         "previous_ids": [
             7
         ],
@@ -610,20 +628,27 @@
                         "text": "Je me d\u00e9cide \u00e0 sauver ces pauvres gens,\\nbaisse mon pantalon et urine directement\\ndans le coeur du volcan.",
                         "next_event_title": "Mort du joueur",
                         "solution": "Pendant votre tentative de sauvetage, un morceau de lave vous atterrit dessus et vous tue.\n\nVous avez \u00e9chou\u00e9..",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": -1
                     },
                     {
                         "text": "Je dois absolument repartir d\u2019ici !\\nJe pr\u00e9pare un nouveau voyage et m\u2019en vais aussit\u00f4t !",
                         "next_event_title": "Invention et utilisation de la poudre \u00e0 canon",
                         "solution": "Vous vous enfuyez l\u00e2chement et laissez ainsi les habitants de Pomp\u00e9i mourir sous la lave. Vous \u00eates bien l\u00e2che...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": 19
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            -1,
+            19
+        ],
+        "previous_ids": [
+            9
+        ],
         "id": 12
     },
     {
@@ -688,20 +713,27 @@
                         "text": "Je me contente de regarder",
                         "next_event_title": "Chute de l\u2019empire romain d\u2019occident",
                         "solution": "Ce qui devait arriver arriva.. Les billes de poudre \u00e0 canon touchent la torche et explosent \u00e0 son contact.\n\nVous venez de faire d\u00e9couvrir au monde l'utilit\u00e9 de la poudre \u00e0 canon",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 20
                     },
                     {
                         "text": "J\u2019ai un mauvais pressentiment",
                         "next_event_title": "Fin utopique",
                         "solution": "Vous courez et ramassez la torche avant que le contact n'ait lieu.\n\nSuite \u00e0 votre action, l'utilit\u00e9 de la poudre \u00e0 canon ne sera jamais d\u00e9couverte.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -8
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            20,
+            -8
+        ],
+        "previous_ids": [
+            19
+        ],
         "id": 14
     },
     {
@@ -737,7 +769,10 @@
             }
         ],
         "tag": "real",
-        "next_ids": [],
+        "next_ids": [
+            16,
+            -4
+        ],
         "previous_ids": [
             13
         ],
@@ -776,8 +811,13 @@
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            17,
+            -2
+        ],
+        "previous_ids": [
+            15
+        ],
         "id": 16
     },
     {
@@ -813,8 +853,13 @@
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            18,
+            -2
+        ],
+        "previous_ids": [
+            16
+        ],
         "id": 17
     },
     {
@@ -850,8 +895,13 @@
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            3,
+            -2
+        ],
+        "previous_ids": [
+            17
+        ],
         "id": 18
     },
     {
@@ -873,20 +923,27 @@
                         "text": "Des Commercer avec barbares ?!\\n Jamais de la vie !",
                         "next_event_title": "Fin dictateur",
                         "solution": "Il s'agissait de  Romulus Augustule suppos\u00e9 \u00eatre le dernier empereur de l'empire romain d'occident.\n\nGr\u00e2ce \u00e0 vos bons conseils, l'empire ne chute pas et prosp\u00e8re ind\u00e9finiment.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": -3
                     },
                     {
                         "text": "Qu\u2019en sais-je.. ? Je suppose que c\u2019est un bon deal.",
                         "next_event_title": "Christophe Colomb d\u00e9couvre l\u2019Am\u00e9rique",
                         "solution": "L'homme suit vos conseils. Quelques ann\u00e9es plus tard, il regrettera ce choix qui a fait \u00e9crouler son empire.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": 14
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            -3,
+            14
+        ],
+        "previous_ids": [
+            12
+        ],
         "id": 19
     },
     {
@@ -908,20 +965,27 @@
                         "text": "Je ne veux pas couler avec eux. Je les aides \u00e0 s\u2019en sortir !",
                         "next_event_title": "R\u00e9forme de Martin Luther en Allemagne",
                         "solution": "Gr\u00e2ce \u00e0 vous, le navire sort de la temp\u00eate et atteint de nouvelles terres inexplor\u00e9es jusqu\u2019alors.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 2
                     },
                     {
                         "text": "Je pr\u00e9f\u00e8re les laisser et m\u2019en vais \u00e0 l'\u00e9v\u00e8nement suivant.",
                         "next_event_title": "Fin Chaotique",
                         "solution": "En vous en allant, vous voyez le navire couler et son \u00e9quipage p\u00e9rir. \n\nSuite \u00e0 votre action, Christophe Colomb ne d\u00e9couvre pas l'Am\u00e9rique.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -8
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
+        "next_ids": [
+            2,
+            -8
+        ],
+        "previous_ids": [
+            14
+        ],
         "id": 20
     }
 ]

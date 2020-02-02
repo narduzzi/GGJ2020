@@ -85,6 +85,8 @@ def update_event(id, data):
     with open(events_json, "w") as f:
         json.dump(new_db, f, indent=4)
 
+    update_connectivity()
+
 
 def get_next_event(current_id, question_id, response_id):
     # log("Get next event of {}-{}-{}".format(current_id, question_id, response_id))
