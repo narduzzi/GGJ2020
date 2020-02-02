@@ -135,11 +135,33 @@ def sort_by_key(data):
     return sorted(data, key=lambda x: x["id"])
 
 
+def randomize_events():
+    with open(events_json, "r") as f:
+        data = json.load(f)
+
+    new_dataset = []
+    for d in data:
+        if "answers" in d:
+            r = d["answers"][0]["responses"]
+            random = np.random.random()
+            if random > 0.5:
+                r = r[::-1]
+                d["answers"][0]["responses"] = r
+        new_dataset.append(d)
+
+    with open(events_json, "w") as f:
+        json.dump(new_dataset, f, indent=4)
+
+
 def get_event(event_id):
+    random = np.random.random()
+    if random < 0.05:
+        randomize_events()
     # log("Get event {}".format(event_id))
     event_id = int(event_id)
     with open(events_json, "r") as f:
         data = json.load(f)
+
     data = sort_by_key(data)
     for d in data:
         if d["id"] == event_id:
