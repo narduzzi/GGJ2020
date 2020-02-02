@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>The biggest game ever</title>
@@ -19,32 +20,51 @@
 
 
 <body class="text-center">
+<div class="bg-light p-3 container" style="border-radius: 10px;width: 50%; margin-top: 5%;">
 
-<div>
-    <p>Étant donnée l'évènement suivant:</p>
+    <div>
+        <p>Étant donnée l'évènement suivant:</p>
+    </div>
+
+    <div>
+        <p><b id="event1"></b></p>
+    </div>
+
+    <div>
+        <p>Trouvez un évènement qui mènera à l'évènemet suivant:</p>
+    </div>
+
+    <div>
+        <p><b id="event2"></b></p>
+    </div>
+
+    <div>
+        <div>
+            <p>Favorisez les titres sans verbe. Exemple : "Invention de la lumière", "Mort de Kennedy"...</p>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Titre</label>
+            <input id="input" placeholder="Description" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">Titre de l'évènement</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Date</label>
+            <input id="date" type="number" placeholder="Date" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">Date de l'évènement</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Description</label>
+            <textarea id="description" type="number" placeholder="Description" class="form-control"></textarea>
+            <small id="emailHelp" class="form-text text-muted">Une brève description de l'évènement.</small>
+        </div>
+
+
+    </div>
+
+    <button class="btn btn-primary" onclick="submit_event()">
+        Submit
+    </button>
 </div>
-
-<div>
-    <p><b id="event1"></b></p>
-</div>
-
-<div>
-    <p>Trouvez un évènement qui mènera à l'évènemet suivant:</p>
-</div>
-
-<div>
-    <p><b id="event2"></b></p>
-</div>
-
-<div>
-    <input id="input" placeholder="event description">
-    <input id="date" type="number" placeholder="date">
-</div>
-
-<button class="btn btn-primary" onclick="submit_event()">
-    Submit
-</button>
-
 </body>
 <script>
 
@@ -72,12 +92,13 @@
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                "event": $('#input').val(), "date": $('#date').val(), "tag":"real",
-                "event1":event1,"event2":event2
+                "event": $('#input').val(), "date": $('#date').val(), "tag": "real",
+                "description": $('#description').val(),
+                "event1": event1, "event2": event2
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/';
+                window.location = 'http://192.168.0.193:8080/annotate';
 
             },
             error: function (jqXhr, textStatus, errorThrown) {
@@ -86,4 +107,5 @@
         });
     }
 </script>
+
 </html>

@@ -15,10 +15,17 @@ events_adjacency_json = "data/events_adjacency_matrix.json"
 theme_json = "data/themes.json"
 
 
+@app.route('/welcome')
+def welcome():
+   return render_template("welcome.html")
+
 @app.route('/')
 def index():
-    user_asking = [happened, not_happened, not_not, not_yes, create_question]
-    user_asking = [linker]
+   return render_template("welcome.html")
+
+@app.route('/annotate')
+def annotate():
+    user_asking = [happened, not_happened, not_not, not_yes, create_question, provide_question]
     i = np.random.randint(0, len(user_asking))
     return user_asking[i]()
 
@@ -91,6 +98,8 @@ def get_random_events():
     while not correct:
         a = np.random.randint(0, len(events))
         b = np.random.randint(0, len(events))
+        if a == b:
+            continue
 
         e1 = events[a]
         e2 = events[b]
@@ -121,14 +130,49 @@ def not_happened():
 @app.route("/submit_event", methods=["POST"])
 def submit_event():
     data = request.get_json()
-    event = e.add_event(data["event"], data["date"], tag=data["tag"])
+    event = e.add_event_from_json(data["new_event"])
 
     if "event2" in data:
         e.remove_adjacent(data["event1"], data["event2"])
-        e.add_adjacent(data["event1"], event)
         e.add_adjacent(event, data["event2"])
+    if "event1" in data:
+        e.add_adjacent(data["event1"], event)
 
     return success()
+
+
+@app.route("/provide_question", methods=["GET"])
+def provide_question():
+    return render_template("provide_question.html")
+
+
+@app.route("/fetch_unasked", methods=["GET"])
+def fetch_unasked():
+    found = False
+    all_ids = e.get_event_ids()
+    data = []
+    i = 0
+    while not found:
+        for id in all_ids:
+            data = e.get_event(id)
+            if "questions" not in data.keys():
+                found = True
+            else:
+                if len(data["questions"]) > i:
+                    continue
+                else:
+                    found = True
+        i = i + 1
+    print("Fetching unasked:", data)
+    return make_response(jsonify(data), 200)
+
+
+@app.route("/submit_question", methods=["POST"])
+def submit_question():
+    data = request.get_json()
+    print(data)
+    e.add_question(event_id=data["id"], question=data["question"])
+    return make_response(jsonify(data), 200)
 
 
 def success(data=None):
@@ -165,8 +209,6 @@ def add_event():
     data = request.get_json()
     print(data)
     return make_response(jsonify(data), 200)
-
-
 
 
 @app.route("/new_event", methods=["POST"])

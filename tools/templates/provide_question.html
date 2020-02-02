@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The biggest game ever</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+
+<body class="text-center">
+
+<div>
+    <h4>Posez une question vaguement liée à l'évènement suivant:</h4>
+</div>
+
+<div>
+    <h3 style="color:darkblue"><b id="event1"></b></h3>
+</div>
+<div>
+    <h5 style="color:blue"><b id="description"></b></h5>
+</div>
+
+<br>
+<div>
+    <p>Exemple pour l'évènement "BigBang" : "Une petite boule de gaz apparaît. Que faites-vous?"</p>
+</div>
+<div>
+    <p id="question-id" style="display: none"></p>
+    <input id="question" placeholder="Insérez un énoncé de question">
+</div>
+<br>
+<button class="btn btn-primary" onclick="submit_event()">
+    Submit
+</button>
+
+</body>
+<script>
+
+    get_random_events()
+    var event1 = "";
+
+    function get_random_events() {
+        $.get("http://192.168.0.193:8080/fetch_unasked", function (data, textStatus, jQxhr) {
+            console.log(data);
+            event1 = data
+            var input1 = document.getElementById("event1");
+            input1.innerText = event1["event"] + " (an " + event1["date"] + ")";
+            //var description = document.getElementById("description");
+            //description.innerText = event1["description"];
+            var id = document.getElementById("question-id");
+            id.setAttribute("value", event1["id"])
+        });
+    }
+
+    function submit_event() {
+        $.ajax({
+            url: 'http://192.168.0.193:8080/submit_question',
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "id": $('#question-id').val(),
+                "question": $('#question').val()
+            }),
+            processData: false,
+            success: function (data, textStatus, jQxhr) {
+                window.location = 'http://192.168.0.193:8080/';
+
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+</script>
+</html>
