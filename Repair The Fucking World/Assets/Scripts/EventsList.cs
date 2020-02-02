@@ -28,4 +28,9 @@ public class EventsList
     {
         Events.Add(_event.ID, _event);
     }
+
+    public Event NextEvent(int questionID)
+    {
+        return Events[questionID];
+    }
 }
