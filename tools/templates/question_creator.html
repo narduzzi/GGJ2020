@@ -19,47 +19,80 @@
 
 
 <body class="text-center">
-<div>
-    <h4>Create a question</h4>
+<div class="bg-light p-3 container" style="border-radius: 10px;width: 50%; margin-top: 5%;">
+
+    <h4>Crée une question</h4>
     <br>
+
     <div>
-        <a>Theme</a>
-        <input id="theme">
-    </div>
-    <br>
-    <div>
-        <a>Title</a>
-        <input id="title" placeholder="Title of the event" value="{{event_title}}">
-    </div>
-    <br>
-    <div>
-        <a>Date</a>
-        <input id="date" placeholder="Date of the event" type="number">
-    </div>
-    <br>
-    <div>
-        <textarea id="description" placeholder="Summary of the event (description)" style="width:400px"></textarea>
-    </div>
-    <br>
-    <div>
-        <textarea id="question" placeholder="Write your question related to the event" style="width:400px"></textarea>
-    </div>
-    <div>
-        <br>
-        <h5>GOOD</h5>
-        <div>
-            <a>Response</a> <input id="good-res" placeholder="Good answer">
-            <a>Lead to event</a> <input id="good-event" placeholder="Good event title">
+        <div class="form-group">
+                <label for="exampleFormControlSelect1">Thème</label>
+                <select id="theme" class="form-control">
+                </select>
         </div>
-        <br>
-        <h5>BAD</h5>
-        <div>
-            <a>Response</a> <input id="bad-res" placeholder="Good answer">
-            <a>Lead to event</a> <input id="bad-event" placeholder="Good event title">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Titre de l'évènement</label>
+            <input id="title" placeholder="Titre de l'évènement" value="{{event_title}}">
+            <small id="emailHelp" class="form-text text-muted">Titre de l'évènement</small>
         </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Date de l'évènement</label>
+            <input id="date" type="number" placeholder="Date" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">L'année où l'évènement a eu lieu.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Description de l'évènement</label>
+            <textarea id="description" placeholder="Résumé" style="width:400px"></textarea>
+            <small id="emailHelp" class="form-text text-muted">Une brève description de l'évènement</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Question</label>
+            <textarea id="question" placeholder="Question" style="width:400px"></textarea>
+            <small id="emailHelp" class="form-text text-muted">Question sur l'évènement</small>
+        </div>
+
+        <div>
+            <a>Réponse A</a>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Réponse</label>
+                <input id="good-res" placeholder="Réponse A (bonne)">
+                <small id="emailHelp" class="form-text text-muted">Réponse "normale"</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Solution</label>
+                <textarea id="good-solution" placeholder="Message affiché si cette réponse est choisie"></textarea>
+                <small id="emailHelp" class="form-text text-muted">Description de la solution</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Evènement suivant</label>
+                <input id="good-event" placeholder="Titre du l'évènement suivant évènement">
+                <small id="emailHelp" class="form-text text-muted">Titre de l'évènement</small>
+            </div>
+
+            <br>
+            <br>
+            <a>Réponse B</a>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Réponse</label>
+                <input id="bad-res" placeholder="Réponse B">
+                <small id="emailHelp" class="form-text text-muted">Autre réponse</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Solution</label>
+                <textarea id="bad-solution" placeholder="Message affiché si cette réponse est choisie"></textarea>
+                <small id="emailHelp" class="form-text text-muted">Description de la solution</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Evènement suivant</label>
+                <input id="bad-event" placeholder="Titre du l'évènement suivant évènement">
+                <small id="emailHelp" class="form-text text-muted">Titre de l'évènement</small>
+            </div>
+
+        </div>
+
     </div>
 </div>
-
 <br>
 <div>
     <button class="btn btn-primary" onclick="submit_event()">
@@ -69,6 +102,19 @@
 
 </body>
 <script>
+    get_themes()
+
+    function get_themes(){
+        $.get("http://192.168.0.193:8080/get_themes", function (data, textStatus, jQxhr) {
+           var dropdown_question = document.getElementById("theme");
+            for (i = 0; i < data.length; i++) {
+                var text = data[i]["theme"];
+                var option = document.createElement("option");
+                option.innerText = text;
+                dropdown_question.appendChild(option)
+            }
+        });
+    }
 
     function submit_event() {
         $.ajax({
@@ -87,11 +133,13 @@
                     "responses": [{
                         "text": $('#good-res').val(),
                         "next_event_title": $('#good-event').val(),
+                        "solution": $('#good-solution').val(),
                         "type": "good"
                     },
                         {
                             "text": $('#bad-res').val(),
                             "next_event_title": $('#bad-event').val(),
+                            "solution": $('#bad-solution').val(),
                             "type": "bad"
                         }]
                 }],

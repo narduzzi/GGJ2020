@@ -5,18 +5,38 @@
   },
   {
     "id": 1,
-    "theme": "Prehistory"
+    "theme": "Préhistoire"
   },
   {
     "id": 2,
-    "theme": "Middle Age"
+    "theme": "Antiquité"
   },
   {
     "id": 3,
-    "theme": "Modern Age"
+    "theme": "Moyen-Âge"
   },
   {
     "id": 4,
-    "theme": "Contemporary"
+    "theme": "Temps modernes"
+  },
+  {
+    "id": 5,
+    "theme": "Aujourd'hui"
+  },
+  {
+    "id": 6,
+    "theme": "Futuriste"
+  },
+  {
+    "id": 7,
+    "theme": "Nature"
+  },
+  {
+    "id": 8,
+    "theme": "Chaos"
+  },
+  {
+    "id": 9,
+    "theme": "Utopie"
   }
 ]

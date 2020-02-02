@@ -1,12 +1,13 @@
 [
     {
-        "theme": "The Big Bang",
-        "event": "The Big Bang",
-        "date": -4000000000,
+        "theme": "BigBang",
+        "event": "Start",
+        "date": "-776",
+        "description": "",
         "questions": [
             {
                 "id": 0,
-                "text": "Il y a une petite boule de gaz. Que faites-vous?"
+                "text": "D\u00e9but du jeu"
             }
         ],
         "answers": [
@@ -14,29 +15,99 @@
                 "question_id": 0,
                 "responses": [
                     {
-                        "text": "Je souffle dessus pour l'\u00e9teindre.",
-                        "next_event_title": "R\u00e9volution n\u00e9olithique",
-                        "solution": "Vous emp\u00eachez le Big Bang",
-                        "next_event_id": 0,
+                        "text": "Je lance la partie",
+                        "next_event_title": "",
+                        "solution": "Vous avez lanc\u00e9 la partie",
                         "type": "good",
-                        "meta": {}
+                        "next_event_id": 1
                     },
                     {
-                        "text": "J'aime regarder les grosses explosion et ne fait rien.",
-                        "next_event_title": "R\u00e9volution n\u00e9olithique",
-                        "solution": "Le Big Bang se r\u00e9alise.",
-                        "next_event_id": 1,
-                        "type": "bad",
-                        "meta": {}
+                        "text": "Je lance la partie",
+                        "next_event_title": "",
+                        "solution": "Vous avez lanc\u00e9 la partie",
+                        "type": "good",
+                        "next_event_id": 1
                     }
                 ]
             }
         ],
         "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
         "id": 0
     },
     {
-        "theme": "",
+        "theme": "Antiquit\u00e9",
+        "event": "Premier jeux olympiques",
+        "date": "-776",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Le peuple accourt pour assister \u00e0 un \u00e9v\u00e9nement r\u00e9unissant les meilleurs athl\u00e8tes de toute la gr\u00e8ce."
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je m\u2019inscris en athletisme, apres tout\\nj\u2019ai une forme olympique !",
+                        "next_event_title": "",
+                        "solution": "Vos talents ont impression\u00e9 tout le monde et ils vous acclament comme un dieu!",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je me contente d\u2019y assister avec\\nma moussaka faite maison",
+                        "next_event_title": "",
+                        "solution": "Une gastro-ent\u00e9rite sans pr\u00e9c\u00e9dent rase l'enti\u00earet\u00e9 de l'humanit\u00e9, personne n'a surv\u00e9cu...",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 1
+    },
+    {
+        "theme": "Temps modernes",
+        "event": "Assassinat de Kennedy",
+        "date": "1963",
+        "description": "L'attentat contre le pr\u00e9sident des Etats-unies ",
+        "questions": [
+            {
+                "id": 0,
+                "text": "En regardant autour de vous, vous voyez une foule en d\u00e9lire. Les personnes semblent acclamer un homme dans une voiture noire. Que faites vous ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je n\u2019aime pas les c\u00e9l\u00e9brit\u00e9s. Je prends un caillou par terre et le lance sur la voiture",
+                        "next_event_title": "Fin paix dans le monde",
+                        "solution": "La voiture d\u00e9vie Kennedy n\u2019est pas assassin\u00e9\nLes Etats-Unis r\u00e9ussisse \u00e0 instaurer la paix dans le monde",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je me fais discret et regarde le cort\u00e8ge.",
+                        "next_event_title": "Chernobyl disaster",
+                        "solution": "Vous assistez \u00e0 l'attentat de Kennedy.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 2
+    },
+    {
+        "theme": "Pr\u00e9histoire",
         "event": "R\u00e9volution n\u00e9olithique",
         "date": "-8000",
         "description": "",
@@ -52,97 +123,15 @@
                 "responses": [
                     {
                         "text": "Des l\u00e9gumes pour nourrir les plus affam\u00e9s",
-                        "next_event_title": "Invention de l\u2019\u00e9criture",
-                        "solution": "La population se d\u00e9veloppe. Les nutriments apport\u00e9s par la nourriture am\u00e9liore les capacit\u00e9s cognitive des habitants de la terre.",
-                        "next_event_id": 2,
-                        "type": "good",
-                        "meta": {}
+                        "next_event_title": "",
+                        "solution": "Votre altruisme permet \u00e0 l'humanit\u00e9 de survivre.",
+                        "type": "good"
                     },
                     {
                         "text": "Du haschisch pour me mettre bien",
-                        "next_event_title": "Fin du monde par la famine",
-                        "solution": "La race humaine dispara\u00eft \u00e0 la suite d'une famine sans pr\u00e9c\u00e9dents.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
-                    }
-                ]
-            }
-        ],
-        "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
-        "id": 1
-    },
-    {
-        "theme": "Pr\u00e9histoire",
-        "event": "Invention de l\u2019\u00e9criture",
-        "date": "-3000",
-        "description": "",
-        "questions": [
-            {
-                "id": 0,
-                "text": "Un homme \u00e9trange vient vers vous vous proposant un moyen de stocker de l\u2019information en appliquant une pression sur des tablettes d\u2019argile. Il d\u00e9cide d\u2019appeler cela l\u2019\u00e9criture !"
-            }
-        ],
-        "answers": [
-            {
-                "question_id": 0,
-                "responses": [
-                    {
-                        "text": "Vous le f\u00e9licitez et proposez de l\u2019aider dans ses recherches",
-                        "next_event_title": "Premier jeux olympiques",
-                        "solution": "L'acc\u00e8s \u00e0 l'\u00e9criture d\u00e9veloppe la culture.",
-                        "next_event_id": 3,
-                        "type": "good",
-                        "meta": {}
-                    },
-                    {
-                        "text": "L\u2019\u00e9cri-quoi ?! \u00e7a ne marchera jamais\u2026 Le d\u00e9noncer \u00e0 la police locale",
-                        "next_event_title": "Fin chaotique car personne ne sait ni \u00e9crire ni lire",
-                        "solution": "Personne ne sait lire et \u00e9crire, la culture de la race humaine s'effondre et Twitter n'est plus qu'un rep\u00e8re de m\u00e8mes sans texte.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
-                    }
-                ]
-            }
-        ],
-        "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
-        "id": 2
-    },
-    {
-        "theme": "Pr\u00e9histoire",
-        "event": "Premier jeux olympiques",
-        "date": "-776",
-        "description": "Le peuple accours pour assister \u00e0 un \u00e9v\u00e9nement r\u00e9unissant les meilleurs athl\u00e8tes de toute la gr\u00e8ce.",
-        "questions": [
-            {
-                "id": 0,
-                "text": "Et vous?"
-            }
-        ],
-        "answers": [
-            {
-                "question_id": 0,
-                "responses": [
-                    {
-                        "text": "Je m\u2019inscris en athl\u00e9tisme, apr\u00e8s tout j\u2019ai une form olympique !",
-                        "next_event_title": "Fondation de Rome",
-                        "solution": "Le divertissement emp\u00eache la population de se r\u00e9volter. L'Empire romain se d\u00e9veloppe et r\u00e8gne sur plusieurs si\u00e8cles.",
-                        "next_event_id": 4,
-                        "type": "good",
-                        "meta": {}
-                    },
-                    {
-                        "text": "Je me contente d\u2019y assister avec mon moussaka fait maison",
-                        "next_event_title": "Fin sans humanit\u00e9, car \u00e9pid\u00e9mie de gastro d\u00fbe \u00e0 la moussaka",
-                        "solution": "La race humaine s'\u00e9teint suite \u00e0 une \u00e9pid\u00e9mie de gastro li\u00e9e \u00e0 une moussaka.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
+                        "next_event_title": "",
+                        "solution": "L'humanit\u00e9 dispara\u00eet car les humains passaient plus de temps \u00e0 fumer qu'\u00e0 manger...",
+                        "type": "bad"
                     }
                 ]
             }
@@ -154,13 +143,13 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": "Fondation de Rome",
-        "date": "-753",
-        "description": "Un jeune inconnu vient vous demander conseil. Il dit que son fr\u00e8re a d\u00e9pass\u00e9 les limites des son territoire en sautant par dessus une cl\u00f4ture.",
+        "event": "Invention de l\u2019\u00e9criture",
+        "date": "-3000",
+        "description": "",
         "questions": [
             {
                 "id": 0,
-                "text": "Quel ch\u00e2timent lui infliger ?"
+                "text": "Un homme \u00e9trange vient vers vous, vous proposant un moyen de stocker de l\u2019information en appliquant une pression sur des tablettes d\u2019argile. Il d\u00e9cide d\u2019appeler cela l\u2019\u00e9criture !"
             }
         ],
         "answers": [
@@ -168,33 +157,97 @@
                 "question_id": 0,
                 "responses": [
                     {
-                        "text": "Faire la paix, c\u2019est bien parfois aussi",
-                        "next_event_title": "Assassinat de Jules C\u00e9sar",
-                        "solution": "Rome se d\u00e9veloppe dans la prosp\u00e9rit\u00e9",
-                        "next_event_id": 5,
-                        "type": "good",
-                        "meta": {}
+                        "text": "Vous le f\u00e9licitez et proposez de l\u2019aider dans ses recherches",
+                        "next_event_title": "",
+                        "solution": "Gr\u00e2ce \u00e0 votre aide, l'invention de l'\u00e9criture est une vraie r\u00e9ussite!",
+                        "type": "good"
                     },
                     {
-                        "text": "Le tuer sur le champ !",
-                        "next_event_title": "Fin chaotique, car deux nations s\u2019affrontent en permanence",
-                        "solution": "Rome n'est pas b\u00e2tie et deux camps passent plusieurs si\u00e8cles \u00e0 s'entre-d\u00e9truire.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
+                        "text": "L\u2019\u00e9cri-quoi ?! \u00e7a ne marchera jamais\u2026\\nLe d\u00e9noncer \u00e0 la police locale",
+                        "next_event_title": "",
+                        "solution": "Puisque personne ne sait ni \u00e9crire, ni lire, le monde n'est devenu que chaos et d\u00e9solation...",
+                        "type": "bad"
                     }
                 ]
             }
         ],
         "tag": "real",
-        "next_ids": [
-            8
-        ],
+        "next_ids": [],
         "previous_ids": [],
         "id": 4
     },
     {
-        "theme": "Pr\u00e9histoire",
+        "theme": "Antiquit\u00e9",
+        "event": "Fondation de Rome",
+        "date": "-753",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Un jeune inconnu vient vous demander conseil. Il dit que son fr\u00e8re a d\u00e9pass\u00e9 les limites de son territoire en sautant par dessus une cl\u00f4ture. Quel ch\u00e2timent lui infliger ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Le tuer sur le champ !",
+                        "next_event_title": "",
+                        "solution": "Apr\u00e8s la mort de Remus, la ville de Rome peut enfin commencer !",
+                        "type": "good"
+                    },
+                    {
+                        "text": " Faire la paix, c\u2019est bien parfois aussi",
+                        "next_event_title": "",
+                        "solution": "Les deux fr\u00e8res se livrent une guerre sans merci, ce qui plonge le monde dans le chaos...",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 5
+    },
+    {
+        "theme": "Temps modernes",
+        "event": "Chernobyl disaster",
+        "date": "1986",
+        "description": "Catastrophe nucl\u00e9aire majeure ayant eu lieu dans la nuit du 25 au 26 avril 1986 en Ukraine",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Suite \u00e0 plusieurs erreurs de tes ing\u00e9nieurs une catastrophe biochimiques se d\u00e9clare. Que fais-tu ? "
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Pr\u00e9venir la population",
+                        "next_event_title": "Windows vista",
+                        "solution": "La population est \u00e9vacu\u00e9e \u00e0 temps. Le monde s'associe et parvient \u00e0 trouver une solution.  ",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Cacher les erreurs",
+                        "next_event_title": "Fin du monde sans humain",
+                        "solution": "La population est infect\u00e9 et meurt au fur et \u00e0 mesure jusqu\u2019\u00e0 l\u2019extinction compl\u00e8te de l\u2019humanit\u00e9.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 6
+    },
+    {
+        "theme": "Antiquit\u00e9",
         "event": "Assassinat de Jules C\u00e9sar",
         "date": "-44",
         "description": "",
@@ -209,98 +262,16 @@
                 "question_id": 0,
                 "responses": [
                     {
-                        "text": "Vous le poignardez comme si vous \u00e9tiez son propre fils",
-                        "next_event_title": "J\u00e9sus",
-                        "solution": "Jules C\u00e9sar meurt.",
-                        "next_event_id": 6,
-                        "type": "good",
-                        "meta": {}
-                    },
-                    {
-                        "text": "Je m\u2019interpose, son nom me rappelle celle d\u2019une salade",
-                        "next_event_title": "Fin dictatoriale, une dictature sans pr\u00e9c\u00e9dent s\u2019est mise en place",
-                        "solution": "Un dictateur du nom de Jules C\u00e9sar prend le pouvoir et instaure un r\u00e9gime sanglant et violent.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
-                    }
-                ]
-            }
-        ],
-        "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
-        "id": 5
-    },
-    {
-        "theme": "Moyen-Age",
-        "event": "J\u00e9sus marche sur les eaux",
-        "date": "30",
-        "description": "",
-        "questions": [
-            {
-                "id": 0,
-                "text": "Vous vous retrouvez sous l\u2019eau, proche d\u2019un rivage. Inexplicablement, sentez qu\u2019on vous marche sur la t\u00eate. Que faits vous ?"
-            }
-        ],
-        "answers": [
-            {
-                "question_id": 0,
-                "responses": [
-                    {
-                        "text": "Je ne sais pas ce qui se passe mais je pr\u00e9f\u00e8re rester discret et faire la statue.",
+                        "text": "Vous le poignardez comme si vous \u00e9tiez\\nson propre fils",
                         "next_event_title": "",
-                        "solution": "J\u00e9sus r\u00e9ussit son miracle et la religion chr\u00e9tienne est n\u00e9e.",
-                        "next_event_id": 7,
-                        "type": "good",
-                        "meta": {}
+                        "solution": "Le renversement de l'empereur Jules C\u00e9sar \u00e9tait une n\u00e9cessit\u00e9 pour le bien de l'humanit\u00e9",
+                        "type": "good"
                     },
                     {
-                        "text": "Il se prend pour qui lui ? Je m\u2019empresse de le faire tomber dans l\u2019eau !",
-                        "next_event_title": "La religion chr\u00e9tienne n'est pas cr\u00e9\u00e9e. Les papes et les croisades n'existent pas. Des millions de morts sont \u00e9pargn\u00e9s. ",
-                        "solution": "La religion chr\u00e9tienne n'est pas cr\u00e9\u00e9e. Les papes et les croisades n'existent pas. Des millions de morts sont \u00e9pargn\u00e9s mais la surpopulation aura raison de la race humaine.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
-                    }
-                ]
-            }
-        ],
-        "tag": "real",
-        "next_ids": [],
-        "previous_ids": [],
-        "id": 6
-    },
-    {
-        "theme": "Moyen-Age",
-        "event": "Pomp\u00e9i est ensevelie",
-        "date": "79",
-        "description": "",
-        "questions": [
-            {
-                "id": 0,
-                "text": "Vous vous retrouvez au sommet d\u2019un volcan en \u00e9ruption. Une fum\u00e9e dense vous \u00e9touffe petit \u00e0 petit et au loin, vous apercevez une ville en panique dont les habitans sont br\u00fbl\u00e9s petit \u00e0 petit par les coul\u00e9es de laves. Le temps vous est compt\u00e9, que faites-vous ?!"
-            }
-        ],
-        "answers": [
-            {
-                "question_id": 0,
-                "responses": [
-                    {
-                        "text": "Je dois absolument repartir d\u2019ici ! Je pr\u00e9pare un nouveau voyage et m\u2019en vais aussit\u00f4t !",
-                        "next_event_title": "Pomp\u00e9i est ensevelie",
-                        "solution": "Pompei est ensevelie.",
-                        "next_event_id": 8,
-                        "type": "good",
-                        "meta": {}
-                    },
-                    {
-                        "text": "Je me d\u00e9cider \u00e0 sauver ces pauvres gens. Je baisse mon pantalon et urine directement dans le coeur du volcan.",
-                        "next_event_title": "Vous perdez le jeu car vous \u00eates tomb\u00e9s dans le volcan.",
-                        "solution": "Vous perdez le jeu car vous \u00eates tomb\u00e9s dans le volcan.",
-                        "next_event_id": -1,
-                        "type": "bad",
-                        "meta": {}
+                        "text": "Je m\u2019interpose, son nom me rappelle\\ncelle d\u2019une salade",
+                        "next_event_title": "",
+                        "solution": "La dictature impos\u00e9e par C\u00e9sar ne disparaitra jamais, le monde ne connaitra qu'une succession de dictateur...",
+                        "type": "bad"
                     }
                 ]
             }
@@ -311,15 +282,388 @@
         "id": 7
     },
     {
-        "theme": "",
-        "event": "Fondation de R\u00eames",
-        "date": "-753",
-        "tag": "fake",
-        "description": "Romulus a \u00e9t\u00e9 vaincu par Remus. C\u00e9sar n'est jamais devenu empereur. Les hommes et les femmes se baladent nus dans R\u00eames.",
-        "id": 8,
+        "theme": "Temps modernes",
+        "event": "Windows vista",
+        "date": "2001",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Tu es \u00e0 la t\u00eate d\u2019une firme multinationale \u00e9mergente,  ta compagnie a pris du retard sur le nouvelle version. Quelle est ton choix ? "
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Ne rien faire.",
+                        "next_event_title": "Greta",
+                        "solution": "F\u00e9licitation Windows Vista ne conna\u00eet pas le jour.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Sortir une version interm\u00e9diaire",
+                        "next_event_title": "Fin vista ",
+                        "solution": "le jeux plante et il recommence ",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
         "next_ids": [],
-        "previous_ids": [
-            4
-        ]
+        "previous_ids": [],
+        "id": 8
+    },
+    {
+        "theme": "Middle Age",
+        "event": "J\u00e9sus marche sur les eaux",
+        "date": "20",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous vous retrouvez sous l\u2019eau, proche d\u2019un rivage. Inexplicablement, vous sentez une sandale s'appuyer contre le haut de votre cr\u00e2ne, comme si on essayait de vous marcher dessus. Que faits vous ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je me fais discret et ne bouge pas",
+                        "next_event_title": "Pomp\u00e9i ensevelie sous le v\u00e9suve",
+                        "solution": "Vous vous laissez donc marcher dessus. L'homme semble alors, gr\u00e2ce \u00e0 vous, marcher sur l'eau. Vous apprendrez plus tard que des t\u00e9moins ont rapport\u00e9 ce ph\u00e9nom\u00e8ne et que l'homme en question est devenu c\u00e9l\u00e8bre gr\u00e2ce \u00e0 \u00e7a.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Il se prend pour qui lui ?\\n Je m\u2019empresse de le faire tomber dans l\u2019eau !",
+                        "next_event_title": "Fin chaotique",
+                        "solution": "Vous saisissez alors la sandale ainsi que l'homme y \u00e9tant rattach\u00e9 et faites tomber le tout dans l'eau. Vous apprenez plus tard que cet homme pr\u00e9tendait \u00eatre capable de marcher sur l'eau.\n\nSuite \u00e0 votre action, le Christianisme n'est pas cr\u00e9\u00e9.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 9
+    },
+    {
+        "theme": "Aujourd'hui",
+        "event": "Greta",
+        "date": "2020",
+        "description": "Greta Thunberg est une militante \u00e9cologiste su\u00e9doise pour la lutte contre le r\u00e9chauffement\n",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Tu es devenu une petite fille de 16 ans. Tu vois que l\u2019environnement se d\u00e9truit au fur et \u00e0 mesure."
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je commence \u00e0 manifester seul tous les vendredi devant mon \u00e9cole ",
+                        "next_event_title": "Explosion",
+                        "solution": "Le monde prends en compte l'urgence climatique et commence \u00e0 chercher une solution",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je me rends en cours pour m\u2019\u00e9duquer",
+                        "next_event_title": "Fin sans humain",
+                        "solution": "Le monde devient invivable les humains sont extermin\u00e9",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 10
+    },
+    {
+        "theme": "Futur",
+        "event": "Explosion",
+        "date": "2030",
+        "description": "END ",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Aimes-tu les explosions ? "
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Oui",
+                        "next_event_title": "3\u00e8me guerre mondial",
+                        "solution": "Un missile nucl\u00e9aire est envoy\u00e9. La 3\u00e8me guerre mondiale est lanc\u00e9",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Non",
+                        "next_event_title": "Fin avec l'humanit\u00e9 sans guerre",
+                        "solution": "La 3\u00e8me guerre mondiale est \u00e9vit\u00e9",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 11
+    },
+    {
+        "theme": "Antiquit\u00e9",
+        "event": "Pomp\u00e9i ensevelie sous le v\u00e9suve",
+        "date": "79",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous vous retrouvez au sommet d\u2019un volcan en \u00e9ruption. Une fum\u00e9e dense vous \u00e9touffe peu \u00e0 peu et au loin, vous apercevez une ville en panique dont les habitants sont br\u00fbl\u00e9s petit \u00e0 petit par les coul\u00e9es de laves. Le temps vous est compt\u00e9, que faites-vous ?!"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je me d\u00e9cide \u00e0 sauver ces pauvres gens,\\nbaisse mon pantalon et urine directement\\ndans le coeur du volcan.",
+                        "next_event_title": "Mort du joueur",
+                        "solution": "Pendant votre tentative de sauvetage, un morceau de lave vous atterrit dessus et vous tue.\n\nVous avez \u00e9chou\u00e9..",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je dois absolument repartir d\u2019ici !\\nJe pr\u00e9pare un nouveau voyage et m\u2019en vais aussit\u00f4t !",
+                        "next_event_title": "Invention et utilisation de la poudre \u00e0 canon",
+                        "solution": "Vous vous enfuyez l\u00e2chement et laissez ainsi les habitants de Pomp\u00e9i mourir sous la lave. Vous \u00eates bien l\u00e2che...",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 12
+    },
+    {
+        "theme": "BigBang",
+        "event": "Big Bang",
+        "date": "-10000",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Aimez-vous les explosions ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Oh oui!",
+                        "next_event_title": "",
+                        "solution": "F\u00e9licitations! L'univers est cr\u00e9e!\nTout se passe \u00e0 merveille jusqu'\u00e0 maintenant.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Non pas vraiment",
+                        "next_event_title": "Fin triste",
+                        "solution": "Malheureusement, pas de Big Bang, pas de vie...\nL'humanit\u00e9 ne verra jamais le jour...\nMais qui dit pas d'humanit\u00e9, dit pas de guerre. Est-ce donc une victoire ?",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 13
+    },
+    {
+        "theme": "Antiquit\u00e9",
+        "event": "Invention et utilisation de la poudre \u00e0 canon",
+        "date": "1460",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous arrivez dans un march\u00e9 asiatique. En explorant les lieux vous tr\u00e9buchez sur un sac remplies de petites billes noires. Ces derni\u00e8res roulent en direction d\u2019une torche tomb\u00e9e au sol. Que faites-vous ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je me contente de regarder",
+                        "next_event_title": "Chute de l\u2019empire romain d\u2019occident",
+                        "solution": "Ce qui devait arriver arriva.. Les billes de poudre \u00e0 canon touchent la torche et explosent \u00e0 son contact.\n\nVous venez de faire d\u00e9couvrir au monde l'utilit\u00e9 de la poudre \u00e0 canon",
+                        "type": "good"
+                    },
+                    {
+                        "text": "J\u2019ai un mauvais pressentiment",
+                        "next_event_title": "Fin utopique",
+                        "solution": "Vous courez et ramassez la torche avant que le contact n'ait lieu.\n\nSuite \u00e0 votre action, l'utilit\u00e9 de la poudre \u00e0 canon ne sera jamais d\u00e9couverte.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 14
+    },
+    {
+        "theme": "Pr\u00e9histoire",
+        "event": " Cr\u00e9ation des premi\u00e8res formes de vies",
+        "date": "-3800000000",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Es-tu hypocondriaque ?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Selon Doctissimo, non",
+                        "next_event_title": "",
+                        "solution": "Gr\u00e2ce \u00e0 votre ouverture aux bact\u00e9ries, les premi\u00e8res formes de vie ont r\u00e9ussi \u00e0 se d\u00e9velopper!",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Absolument!",
+                        "next_event_title": "",
+                        "solution": "A cause de votre hygi\u00e8ne irr\u00e9prochable, vos serviettes d\u00e9sinfectantes et votre Purel\u00ae, les premi\u00e8res bact\u00e9ries sur terre ont \u00e9t\u00e9 extermin\u00e9es, rendant la vie humaine impossible. ",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 15
+    },
+    {
+        "theme": "Pr\u00e9histoire",
+        "event": "",
+        "date": "-2000000000",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Vous marchez tranquillement pr\u00e8s d\u2019un lac et vous apercevez une cr\u00e9ature mi-poisson, mi-l\u00e9zard, que faites-vous?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Je continue ma marche",
+                        "next_event_title": "",
+                        "solution": "En laissant cette mutation vivre, vous permettez \u00e0 la vie de se d\u00e9velopper sur la terre ferme, bravo!\n",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Je l\u2019\u00e9crase, cette cr\u00e9ature mutante pourrait\\n\u00eatre dangereuse pour l\u2019humanit\u00e9",
+                        "next_event_title": "",
+                        "solution": "En tuant cette cr\u00e9ature mutante, la vie ne se d\u00e9veloppera sur la terre ferme, cr\u00e9ant ainsi la ville sous marine, Atlantis, qui s\u2019auto-exterminera 4 ans plus tard.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 16
+    },
+    {
+        "theme": "Pr\u00e9histoire",
+        "event": "",
+        "date": "-250000000",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Une m\u00e9t\u00e9orite s'appr\u00eate \u00e0 percuter la terre! Gr\u00e2ce \u00e0 votre technologie futuriste, vous pouvez \u00e9viter l\u2019impact. Le faites-vous?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Non, qu'ils meurent tous!",
+                        "next_event_title": "",
+                        "solution": "Vous \u00eates tr\u00e8s t\u00e9m\u00e9raire! Vous avez heureusement surv\u00e9cu, mais le reste de la population de dinosaure est extermin\u00e9, permettant aux singes de pouvoir vivre sans danger.",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Absolument",
+                        "next_event_title": "",
+                        "solution": "Votre bienveillance m\u00e8ne au chaos. Les dinosaures, \u00e9vitant l\u2019impact du m\u00e9t\u00e9orite, d\u00e9veloppent le troc, la litt\u00e9rature et le rock m\u00e9tal. Ils extermineront toute la population de primate sur terre, dans le but d\u2019utiliser les peaux et les os des singes comme monnaie de troc.",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 17
+    },
+    {
+        "theme": "Pr\u00e9histoire",
+        "event": " L\u2019\u00e9volution des singes",
+        "date": "-10000",
+        "description": "",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Est-ce que vous \u00eates pyromane?"
+            }
+        ],
+        "answers": [
+            {
+                "question_id": 0,
+                "responses": [
+                    {
+                        "text": "Oui",
+                        "next_event_title": "",
+                        "solution": "Votre int\u00e9r\u00eat pour br\u00fbler des objets n\u2019est plus un danger pour la soci\u00e9t\u00e9, mais une solution. Profitez-en!",
+                        "type": "good"
+                    },
+                    {
+                        "text": "Non",
+                        "next_event_title": "",
+                        "solution": "Combattre le feu par le feu\u2026 Vos actes de bont\u00e9 et de pacifisme ne permettent pas de d\u00e9velopper le feu, \u00e9l\u00e9ment essentiel \u00e0 l\u2019\u00e9volution humaine!",
+                        "type": "bad"
+                    }
+                ]
+            }
+        ],
+        "tag": "real",
+        "next_ids": [],
+        "previous_ids": [],
+        "id": 18
     }
 ]

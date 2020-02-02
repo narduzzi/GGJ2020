@@ -45,16 +45,16 @@ def log(message):
 
 
 def get_event_ids():
-    log("Get events IDs")
+    #log("Get events IDs")
     with open(events_json, "r") as f:
         data = json.load(f)
     all_ids = sorted([d["id"] for d in data])
-    print(all_ids)
+
     return all_ids
 
 
 def get_event_by(event=""):
-    log("Get event by ", event)
+    #log("Get event by ", event)
     with open(events_json, "r") as f:
         data = json.load(f)
 
@@ -65,8 +65,8 @@ def get_event_by(event=""):
 
 
 def get_next_event(current_id, question_id, response_id):
-    log("Get next event of {}-{}-{}".format(current_id, question_id, response_id))
-    if current_id < 0:
+    #log("Get next event of {}-{}-{}".format(current_id, question_id, response_id))
+    if int(current_id) < 0:
         return get_event(0)
 
     with open(events_json, "r") as f:
@@ -83,7 +83,7 @@ def get_next_event(current_id, question_id, response_id):
 
 
 def get_random_event():
-    log("Get random event")
+    #log("Get random event")
     with open(events_json, "r") as f:
         data = json.load(f)
     all_ids = sorted([d["id"] for d in data])
@@ -101,7 +101,7 @@ def get_new_event_id():
 
 
 def get_related(idx):
-    log("Get related to ", idx)
+    #log("Get related to " + idx)
     with open(events_json, "r") as f:
         data = json.load(f)
     return data
@@ -112,21 +112,20 @@ def sort_by_key(data):
 
 
 def get_event(event_id):
-    log("Get event " + event_id)
+    #log("Get event {}".format(event_id))
     if event_id < 0:
         event_id = 0
     with open(events_json, "r") as f:
         data = json.load(f)
     data = sort_by_key(data)
     for d in data:
-        print(d["id"], d)
         if d["id"] == event_id:
             return d
     return None
 
 
 def save_event(new_event):
-    log("Save event " + new_event["id"])
+    #log("Save event " + new_event["id"])
     with open(events_json, "r") as f:
         data = json.load(f)
 
@@ -150,7 +149,7 @@ def add_event_from_json(event):
         data = json.load(f)
 
     event["id"] = get_new_event_id()
-    log("Add event from json " + event["id"])
+    #log("Add event from json " + event["id"])
     data.append(event)
     with open(events_json, "w") as f:
         json.dump(data, f, indent=4)
@@ -182,7 +181,7 @@ def add_event(event, date, question=None, responses=[], previous_id=None, next_i
 
     data.append(new_event)
 
-    log("Add event {}".format(new_event["id"]))
+    #log("Add event {}".format(new_event["id"]))
     with open(events_json, "w") as f:
         json.dump(data, f, indent=4)
     return new_event
@@ -192,7 +191,7 @@ def add_adjacent(eventA, eventB):
     with open(events_json, "r") as f:
         data = json.load(f)
 
-    log("Adjacent {} - {}".format(eventA["id"], eventB["id"]))
+    #log("Adjacent {} - {}".format(eventA["id"], eventB["id"]))
 
     if "next_ids" not in data[eventA["id"]].keys():
         data[eventA["id"]]["next_ids"] = []
@@ -211,7 +210,7 @@ def add_adjacent(eventA, eventB):
 
 
 def remove_adjacent(eventA, eventB):
-    log("Remove adjacent {} {}".format(eventA["id"], eventB["id"]))
+    #log("Remove adjacent {} {}".format(eventA["id"], eventB["id"]))
     with open(events_json, "r") as f:
         data = json.load(f)
 
@@ -224,7 +223,7 @@ def remove_adjacent(eventA, eventB):
 
 
 def add_response(event_id, response):
-    log("Add response to {}".format(event_id))
+    #log("Add response to {}".format(event_id))
     with open(events_json, "r") as f:
         data = json.load(f)
 
@@ -236,7 +235,7 @@ def add_response(event_id, response):
 
 
 def add_question(event_id, question):
-    log("Add question to {}".format(event_id))
+    #log("Add question to {}".format(event_id))
     with open(events_json, "r") as f:
         data = json.load(f)
 
@@ -252,7 +251,7 @@ def add_question(event_id, question):
 
 
 def remove_question(event_id, next_event_id):
-    log("Remove question from {}".format(event_id))
+    #log("Remove question from {}".format(event_id))
     with open(events_json, "r") as f:
         data = json.load(f)
 

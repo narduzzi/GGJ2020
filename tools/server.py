@@ -17,11 +17,13 @@ theme_json = "data/themes.json"
 
 @app.route('/welcome')
 def welcome():
-   return render_template("welcome.html")
+    return render_template("welcome.html")
+
 
 @app.route('/')
 def index():
-   return render_template("welcome.html")
+    return render_template("question_creator.html")
+
 
 @app.route('/annotate')
 def annotate():
@@ -170,7 +172,6 @@ def fetch_unasked():
 @app.route("/submit_question", methods=["POST"])
 def submit_question():
     data = request.get_json()
-    print(data)
     e.add_question(event_id=data["id"], question=data["question"])
     return make_response(jsonify(data), 200)
 
@@ -199,7 +200,6 @@ def get_next_question():
     response_id = request.args.get("response_id", default=0)
 
     response = e.get_next_event(current_id, question_id=question_id, response_id=response_id)
-    print(response)
 
     return make_response(jsonify(response), 200)
 
