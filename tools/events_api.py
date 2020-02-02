@@ -145,6 +145,34 @@ def get_event(event_id):
     return None
 
 
+def update_connectivity():
+    with open(events_json, "r") as f:
+        data = json.load(f)
+
+    previous_nodes = dict([(d["id"], []) for d in data])
+    next_nodes = dict([(d["id"], []) for d in data])
+
+    for d in data:
+        idx = d["id"]
+        if "answers" in d.keys():
+            for r in d["answers"][0]["responses"]:
+                if "next_event_id" in r.keys():
+                    next_id = int(r["next_event_id"])
+
+                    next_nodes[idx].append(next_id)
+                    previous_nodes[next_id].append(idx)
+
+    new_data = []
+    for d in data:
+        idx = d["id"]
+        d["next_ids"] = next_nodes[idx]
+        d["previous_ids"] = previous_nodes[idx]
+        new_data.append(d)
+
+    with open(events_json, "w") as f:
+        json.dump(new_data, f, indent=4)
+
+
 def save_event(new_event):
     # log("Save event " + new_event["id"])
     with open(events_json, "r") as f:

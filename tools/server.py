@@ -159,6 +159,11 @@ def submit_link():
     return success()
 
 
+@app.route("/update_connectivity", methods=["GET"])
+def update_connectivity():
+    e.update_connectivity()
+    return success()
+
 @app.route("/get_all_events", methods=["GET"])
 def get_all_events():
     key = request.args.get("key", type=str, default="id")

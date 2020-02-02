@@ -1,112 +1,6 @@
 [
-    {
-        "theme": "Nature",
-        "event_title": "Fin utopique",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            2
-        ],
-        "id": -8,
-        "next_ids": []
-    },
-    {
-        "theme": "Futur",
-        "event_title": "Fin futuriste",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [],
-        "id": -7,
-        "next_ids": []
-    },
-    {
-        "theme": "Futur",
-        "event_title": "Fin Windows Vista",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            8
-        ],
-        "id": -6,
-        "next_ids": []
-    },
-    {
-        "theme": "Chaos",
-        "event_title": "Fin normale",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            11
-        ],
-        "id": -5,
-        "next_ids": []
-    },
-    {
-        "theme": "Chaos",
-        "event_title": "Fin triste",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            13
-        ],
-        "id": -4,
-        "next_ids": []
-    },
-    {
-        "theme": "Chaos",
-        "event_title": "Fin dictatorial",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            7
-        ],
-        "id": -3,
-        "next_ids": []
-    },
-    {
-        "theme": "Nature",
-        "event_title": "Fin nature",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            1,
-            3
-        ],
-        "id": -2,
-        "next_ids": []
-    },
-    {
-        "theme": "Chaos",
-        "event_title": "Fin chaotique",
-        "date": 4000000000,
-        "description": "",
-        "tag": "end",
-        "previous_ids": [
-            4,
-            5,
-            6,
-            10,
-            11
-        ],
-        "id": -1,
-        "next_ids": []
-    },
-    {
-        "theme": "BigBang",
-        "event_title": "Start",
-        "date": -10000000000,
-        "description": "",
-        "questions": [
-            {
-                "id": 0,
-                "text": "D\u00e9but du jeu"
+
+    u jeu"
             }
         ],
         "answers": [
@@ -132,7 +26,6 @@
         ],
         "tag": "real",
         "next_ids": [
-            13,
             13
         ],
         "previous_ids": [],
@@ -171,13 +64,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            5,
-            -2
-        ],
-        "previous_ids": [
-            4
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 1
     },
     {
@@ -213,10 +101,7 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            -8,
-            6
-        ],
+        "next_ids": [],
         "previous_ids": [],
         "id": 2
     },
@@ -253,10 +138,7 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            4,
-            -2
-        ],
+        "next_ids": [],
         "previous_ids": [],
         "id": 3
     },
@@ -293,13 +175,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            1,
-            -1
-        ],
-        "previous_ids": [
-            3
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 4
     },
     {
@@ -335,13 +212,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            7,
-            -1
-        ],
-        "previous_ids": [
-            1
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 5
     },
     {
@@ -377,13 +249,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            8,
-            -1
-        ],
-        "previous_ids": [
-            2
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 6
     },
     {
@@ -419,13 +286,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            9,
-            -3
-        ],
-        "previous_ids": [
-            5
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 7
     },
     {
@@ -461,13 +323,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            10,
-            -6
-        ],
-        "previous_ids": [
-            6
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 8
     },
     {
@@ -502,9 +359,7 @@
         ],
         "tag": "real",
         "next_ids": [],
-        "previous_ids": [
-            7
-        ],
+        "previous_ids": [],
         "id": 9
     },
     {
@@ -540,13 +395,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            11,
-            -1
-        ],
-        "previous_ids": [
-            8
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 10
     },
     {
@@ -582,13 +432,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            -1,
-            -5
-        ],
-        "previous_ids": [
-            10
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 11
     },
     {
@@ -659,14 +504,8 @@
             }
         ],
         "tag": "real",
-        "next_ids": [
-            15,
-            -4
-        ],
-        "previous_ids": [
-            0,
-            0
-        ],
+        "next_ids": [],
+        "previous_ids": [],
         "id": 13
     },
     {
@@ -723,24 +562,20 @@
                         "text": "Selon Doctissimo, non",
                         "next_event_title": "",
                         "solution": "Gr\u00e2ce \u00e0 votre ouverture aux bact\u00e9ries, les premi\u00e8res formes de vie ont r\u00e9ussi \u00e0 se d\u00e9velopper!",
-                        "type": "good",
-                        "next_event_id": 16
+                        "type": "good"
                     },
                     {
                         "text": "Absolument!",
                         "next_event_title": "",
                         "solution": "A cause de votre hygi\u00e8ne irr\u00e9prochable, vos serviettes d\u00e9sinfectantes et votre Purel\u00ae, les premi\u00e8res bact\u00e9ries sur terre ont \u00e9t\u00e9 extermin\u00e9es, rendant la vie humaine impossible. ",
-                        "type": "bad",
-                        "next_event_id": -4
+                        "type": "bad"
                     }
                 ]
             }
         ],
         "tag": "real",
         "next_ids": [],
-        "previous_ids": [
-            13
-        ],
+        "previous_ids": [],
         "id": 15
     },
     {
@@ -762,15 +597,13 @@
                         "text": "Je continue ma marche",
                         "next_event_title": "",
                         "solution": "En laissant cette mutation vivre, vous permettez \u00e0 la vie de se d\u00e9velopper sur la terre ferme, bravo!\n",
-                        "type": "good",
-                        "next_event_id": 17
+                        "type": "good"
                     },
                     {
                         "text": "Je l\u2019\u00e9crase, cette cr\u00e9ature mutante pourrait\\n\u00eatre dangereuse pour l\u2019humanit\u00e9",
                         "next_event_title": "",
                         "solution": "En tuant cette cr\u00e9ature mutante, la vie ne se d\u00e9veloppera sur la terre ferme, cr\u00e9ant ainsi la ville sous marine, Atlantis, qui s\u2019auto-exterminera 4 ans plus tard.",
-                        "type": "bad",
-                        "next_event_id": -2
+                        "type": "bad"
                     }
                 ]
             }
@@ -799,15 +632,13 @@
                         "text": "Non, qu'ils meurent tous!",
                         "next_event_title": "",
                         "solution": "Vous \u00eates tr\u00e8s t\u00e9m\u00e9raire! Vous avez heureusement surv\u00e9cu, mais le reste de la population de dinosaure est extermin\u00e9, permettant aux singes de pouvoir vivre sans danger.",
-                        "type": "good",
-                        "next_event_id": 18
+                        "type": "good"
                     },
                     {
                         "text": "Absolument",
                         "next_event_title": "",
                         "solution": "Votre bienveillance m\u00e8ne au chaos. Les dinosaures, \u00e9vitant l\u2019impact du m\u00e9t\u00e9orite, d\u00e9veloppent le troc, la litt\u00e9rature et le rock m\u00e9tal. Ils extermineront toute la population de primate sur terre, dans le but d\u2019utiliser les peaux et les os des singes comme monnaie de troc.",
-                        "type": "bad",
-                        "next_event_id": -2
+                        "type": "bad"
                     }
                 ]
             }
@@ -836,15 +667,13 @@
                         "text": "Oui",
                         "next_event_title": "",
                         "solution": "Votre int\u00e9r\u00eat pour br\u00fbler des objets n\u2019est plus un danger pour la soci\u00e9t\u00e9, mais une solution. Profitez-en!",
-                        "type": "good",
-                        "next_event_id": 3
+                        "type": "good"
                     },
                     {
                         "text": "Non",
                         "next_event_title": "",
                         "solution": "Combattre le feu par le feu\u2026 Vos actes de bont\u00e9 et de pacifisme ne permettent pas de d\u00e9velopper le feu, \u00e9l\u00e9ment essentiel \u00e0 l\u2019\u00e9volution humaine!",
-                        "type": "bad",
-                        "next_event_id": -2
+                        "type": "bad"
                     }
                 ]
             }
