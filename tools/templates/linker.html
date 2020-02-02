@@ -4,101 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <title>The biggest game ever</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 
 <body class="text-center">
-    <div class="container bg-light p-3" style="border-radius: 10px; margin-top: 5%;width: 50%;">
-        <h4>Link a question</h4>
+<div class="container bg-light p-3" style="border-radius: 10px; margin-top: 5%;width: 50%;">
+    <h4>Linker</h4>
 
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Question</label>
-                <select id="dropdown-questions" class="form-control">
-                </select>
-            </div>
-            <a style="text-align: left">Answers</a>
-            <hr>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Good</label>
-                <select class="form-control" name="lead_a">
-                    <option value="volvo">Volvo</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Bad</label>
-                <select class="form-control" name="lead_b">
-                <option value="volvo">Volvo</option>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Question</label>
+        <select id="dropdown-questions" class="form-control" onchange="displayEvent()">
+        </select>
+    </div>
+
+    <div id="question-text"></div>
+
+    <div id="responses-div">
+        <a style="text-align: left">Réponses</a>
+        <hr>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1"><b>Réponse A</b></label>
+            <p id="response-a"></p>
+            <label><b>Solution</b></label>
+            <p id="solution-a"></p>
+            <label><b>Mène à</b></label>
+            <select class="form-control" id="lead_a">
             </select>
-            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1"><b>Réponse B</b></label>
+            <p id="response-b"></p>
+            <label><b>Solution</b></label>
+            <p id="solution-b"></p>
+            <label><b>Mène à</b></label>
+            <select class="form-control" id="lead_b">
+            </select>
+        </div>
         <div>
             <button class="btn btn-primary" onclick="submit_link()">
                 Submit
             </button>
         </div>
     </div>
+</div>
 </body>
 
 <script>
     get_related_events()
 
+    var selectedEvent = 0;
+    var response_a = document.getElementById("response-a");
+    var response_b = document.getElementById("response-b");
+    var solution_a = document.getElementById("solution-a");
+    var solution_b = document.getElementById("solution-b");
+    var lead_a = document.getElementById("lead_a");
+    var lead_b = document.getElementById("lead_b");
+    var response_div = document.getElementById("responses-div");
+    response_div.style.visibility = 'hidden';
+
+    function displayEvent() {
+        var dropdown = document.getElementById("dropdown-questions")
+        selectedEvent = dropdown.selectedIndex;
+        var event_id = dropdown.options[selectedEvent].value;
+        console.log("EventID:" + event_id);
+        if (event_id !== 0) {
+            showEvent(event_id);
+        } else {
+            response_div.style.visibility = 'hidden';
+        }
+    }
+
+    function showEvent(id) {
+        response_div.style.visibility = 'visible';
+        $.get("http://192.168.0.193:8080/get_event?id=" + id, function (data, textStatus, jQxhr) {
+            console.log(data);
+            response_a.innerText = data["answers"][0]["responses"][0]["text"];
+            response_b.innerText = data["answers"][0]["responses"][1]["text"];
+            solution_a.innerText = data["answers"][0]["responses"][0]["solution"];
+            solution_b.innerText = data["answers"][0]["responses"][1]["solution"];
+        })
+    }
+
     function get_related_events() {
-        $.get("http://192.168.0.193:8080/get_related_event", function(data, textStatus, jQxhr) {
+        $.get("http://192.168.0.193:8080/get_all_events?key=date", function (data, textStatus, jQxhr) {
             console.log(data);
             var dropdown_question = document.getElementById("dropdown-questions");
             for (i = 0; i < data.length; i++) {
-                var question_text = data[i]["questions"][0]["text"];
-                var option = document.createElement("option");
-                option.setAttribute("value", "event-" + i + "-question-0");
-                option.innerText = question_text;
-                dropdown_question.appendChild(option)
+                var question_text = data[i]["event_title"] + " (" + data[i]["date"] + ")";
+
+                var option_drop = document.createElement("option");
+                var option_leada = document.createElement("option");
+                var option_leadb = document.createElement("option");
+                option_drop.setAttribute("value", data[i]["id"]);
+                option_leada.setAttribute("value", data[i]["id"]);
+                option_leadb.setAttribute("value", data[i]["id"]);
+                option_drop.innerText = question_text;
+                option_leada.innerText = question_text;
+                option_leadb.innerText = question_text;
+                dropdown_question.appendChild(option_drop);
+                lead_a.appendChild(option_leada);
+                lead_b.appendChild(option_leadb);
             }
         })
     }
 
 
     function submit_link() {
+        var event0 = document.getElementById("dropdown-questions")
+        var eventA = document.getElementById("lead_a")
+        var eventB = document.getElementById("lead_b")
+
+        var selectedEvent0 = event0.options[event0.selectedIndex].value;
+        var selectedEventA = eventA.options[eventA.selectedIndex].value;
+        var selectedEventB = eventB.options[eventB.selectedIndex].value;
+
+
         $.ajax({
             url: 'http://192.168.0.193:8080/submit_link',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                "question_id": $('#theme').val(),
-                "event": $('#input').val(),
-                "date": $('#date').val(),
-                "description": $('#description').val(),
-                "questions": [{
-                    "id": 0,
-                    "text": $('#question').val()
-                }],
-                "answers": [{
-                    "question_id": 0,
-                    "responses": [{
-                            "text": $('#good-res').val(),
-                            "next_event_title": $('#good-event').val(),
-                            "type": "good"
-                        },
-                        {
-                            "text": $('#bad-res').val(),
-                            "next_event_title": $('#bad-event').val(),
-                            "type": "bad"
-                        }
-                    ]
-                }],
-                "tag": "real",
-                "next_ids": [],
-                "previous_ids": []
+                "event": selectedEvent0,
+                "next_id_a": selectedEventA,
+                "next_id_b": selectedEventB
             }),
             processData: false,
-            success: function(data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/question_creator?event_title=' + data["next_event_title"];
+            success: function (data, textStatus, jQxhr) {
+                window.location = 'http://192.168.0.193:8080/linker';
             },
-            error: function(jqXhr, textStatus, errorThrown) {
+            error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
             }
         });

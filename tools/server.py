@@ -143,6 +143,33 @@ def submit_event():
     return success()
 
 
+@app.route("/submit_link", methods=["POST"])
+def submit_link():
+    data = request.get_json()
+    event_id = int(data["event"])
+    next_id_A = int(data["next_id_a"])
+    next_id_B = int(data["next_id_b"])
+
+    event_data = e.get_event(event_id)
+    event_data["answers"][0]["responses"][0]["next_event_id"] = next_id_A
+    event_data["answers"][0]["responses"][1]["next_event_id"] = next_id_B
+
+    e.update_event(id=event_data["id"], data=event_data)
+
+    return success()
+
+
+@app.route("/get_all_events", methods=["GET"])
+def get_all_events():
+    key = request.args.get("key", type=str, default="id")
+    if key == "date":
+        all_events = sorted(e.get_all_events(), key=lambda x: int(x[key]))
+    else:
+        all_events = sorted(e.get_all_events(), key=lambda x: x[key])
+
+    return make_response(jsonify(all_events), 200)
+
+
 @app.route("/provide_question", methods=["GET"])
 def provide_question():
     return render_template("provide_question.html")
@@ -167,6 +194,13 @@ def fetch_unasked():
         i = i + 1
     print("Fetching unasked:", data)
     return make_response(jsonify(data), 200)
+
+
+@app.route("/get_event", methods=["GET"])
+def get_event():
+    id = request.args.get("id", type=int, default=0)
+    event = e.get_event(id)
+    return make_response(jsonify(event), 200)
 
 
 @app.route("/submit_question", methods=["POST"])

@@ -1,8 +1,80 @@
 [
     {
+        "theme": "Nature",
+        "event_title": "Fin utopique",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -8
+    },
+    {
+        "theme": "Futur",
+        "event_title": "Fin futuriste",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -7
+    },
+    {
+        "theme": "Futur",
+        "event_title": "Fin Windows Vista",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -6
+    },
+    {
+        "theme": "Chaos",
+        "event_title": "Fin normale",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -5
+    },
+    {
+        "theme": "Chaos",
+        "event_title": "Fin triste",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -4
+    },
+    {
+        "theme": "Chaos",
+        "event_title": "Fin dictatorial",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -3
+    },
+    {
+        "theme": "Nature",
+        "event_title": "Fin nature",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -2
+    },
+    {
+        "theme": "Chaos",
+        "event_title": "Fin chaotique",
+        "date": 4000000000,
+        "description": "",
+        "tag": "end",
+        "previous_ids": [],
+        "id": -1
+    },
+    {
         "theme": "BigBang",
-        "event": "Start",
-        "date": "-776",
+        "event_title": "Start",
+        "date": -10000000000,
         "description": "",
         "questions": [
             {
@@ -40,8 +112,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Premier jeux olympiques",
-        "date": "-776",
+        "event_title": "Premier jeux olympiques",
+        "date": -776,
         "description": "",
         "questions": [
             {
@@ -57,13 +129,15 @@
                         "text": "Je m\u2019inscris en athletisme, apres tout\\nj\u2019ai une forme olympique !",
                         "next_event_title": "",
                         "solution": "Vos talents ont impression\u00e9 tout le monde et ils vous acclament comme un dieu!",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 5
                     },
                     {
                         "text": "Je me contente d\u2019y assister avec\\nma moussaka faite maison",
                         "next_event_title": "",
                         "solution": "Une gastro-ent\u00e9rite sans pr\u00e9c\u00e9dent rase l'enti\u00earet\u00e9 de l'humanit\u00e9, personne n'a surv\u00e9cu...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -2
                     }
                 ]
             }
@@ -75,8 +149,8 @@
     },
     {
         "theme": "Temps modernes",
-        "event": "Assassinat de Kennedy",
-        "date": "1963",
+        "event_title": "Assassinat de Kennedy",
+        "date": 1963,
         "description": "L'attentat contre le pr\u00e9sident des Etats-unies ",
         "questions": [
             {
@@ -92,13 +166,15 @@
                         "text": "Je n\u2019aime pas les c\u00e9l\u00e9brit\u00e9s. Je prends un caillou par terre et le lance sur la voiture",
                         "next_event_title": "Fin paix dans le monde",
                         "solution": "La voiture d\u00e9vie Kennedy n\u2019est pas assassin\u00e9\nLes Etats-Unis r\u00e9ussisse \u00e0 instaurer la paix dans le monde",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": -8
                     },
                     {
                         "text": "Je me fais discret et regarde le cort\u00e8ge.",
                         "next_event_title": "Chernobyl disaster",
                         "solution": "Vous assistez \u00e0 l'attentat de Kennedy.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": 6
                     }
                 ]
             }
@@ -110,8 +186,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": "R\u00e9volution n\u00e9olithique",
-        "date": "-8000",
+        "event_title": "R\u00e9volution n\u00e9olithique",
+        "date": -8000,
         "description": "",
         "questions": [
             {
@@ -127,13 +203,15 @@
                         "text": "Des l\u00e9gumes pour nourrir les plus affam\u00e9s",
                         "next_event_title": "",
                         "solution": "Votre altruisme permet \u00e0 l'humanit\u00e9 de survivre.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 4
                     },
                     {
                         "text": "Du haschisch pour me mettre bien",
                         "next_event_title": "",
                         "solution": "L'humanit\u00e9 dispara\u00eet car les humains passaient plus de temps \u00e0 fumer qu'\u00e0 manger...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -2
                     }
                 ]
             }
@@ -145,8 +223,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": "Invention de l\u2019\u00e9criture",
-        "date": "-3000",
+        "event_title": "Invention de l\u2019\u00e9criture",
+        "date": -3000,
         "description": "",
         "questions": [
             {
@@ -162,13 +240,15 @@
                         "text": "Vous le f\u00e9licitez et proposez de l\u2019aider dans ses recherches",
                         "next_event_title": "",
                         "solution": "Gr\u00e2ce \u00e0 votre aide, l'invention de l'\u00e9criture est une vraie r\u00e9ussite!",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 1
                     },
                     {
                         "text": "L\u2019\u00e9cri-quoi ?! \u00e7a ne marchera jamais\u2026\\nLe d\u00e9noncer \u00e0 la police locale",
                         "next_event_title": "",
                         "solution": "Puisque personne ne sait ni \u00e9crire, ni lire, le monde n'est devenu que chaos et d\u00e9solation...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -1
                     }
                 ]
             }
@@ -180,8 +260,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Fondation de Rome",
-        "date": "-753",
+        "event_title": "Fondation de Rome",
+        "date": -753,
         "description": "",
         "questions": [
             {
@@ -197,13 +277,15 @@
                         "text": "Le tuer sur le champ !",
                         "next_event_title": "",
                         "solution": "Apr\u00e8s la mort de Remus, la ville de Rome peut enfin commencer !",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 7
                     },
                     {
                         "text": " Faire la paix, c\u2019est bien parfois aussi",
                         "next_event_title": "",
                         "solution": "Les deux fr\u00e8res se livrent une guerre sans merci, ce qui plonge le monde dans le chaos...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -1
                     }
                 ]
             }
@@ -215,8 +297,8 @@
     },
     {
         "theme": "Temps modernes",
-        "event": "Chernobyl disaster",
-        "date": "1986",
+        "event_title": "Chernobyl disaster",
+        "date": 1986,
         "description": "Catastrophe nucl\u00e9aire majeure ayant eu lieu dans la nuit du 25 au 26 avril 1986 en Ukraine",
         "questions": [
             {
@@ -232,13 +314,15 @@
                         "text": "Pr\u00e9venir la population",
                         "next_event_title": "Windows vista",
                         "solution": "La population est \u00e9vacu\u00e9e \u00e0 temps. Le monde s'associe et parvient \u00e0 trouver une solution.  ",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 8
                     },
                     {
                         "text": "Cacher les erreurs",
                         "next_event_title": "Fin du monde sans humain",
                         "solution": "La population est infect\u00e9 et meurt au fur et \u00e0 mesure jusqu\u2019\u00e0 l\u2019extinction compl\u00e8te de l\u2019humanit\u00e9.",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -1
                     }
                 ]
             }
@@ -250,8 +334,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Assassinat de Jules C\u00e9sar",
-        "date": "-44",
+        "event_title": "Assassinat de Jules C\u00e9sar",
+        "date": -44,
         "description": "",
         "questions": [
             {
@@ -267,13 +351,15 @@
                         "text": "Vous le poignardez comme si vous \u00e9tiez\\nson propre fils",
                         "next_event_title": "",
                         "solution": "Le renversement de l'empereur Jules C\u00e9sar \u00e9tait une n\u00e9cessit\u00e9 pour le bien de l'humanit\u00e9",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 9
                     },
                     {
                         "text": "Je m\u2019interpose, son nom me rappelle\\ncelle d\u2019une salade",
                         "next_event_title": "",
                         "solution": "La dictature impos\u00e9e par C\u00e9sar ne disparaitra jamais, le monde ne connaitra qu'une succession de dictateur...",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -3
                     }
                 ]
             }
@@ -285,8 +371,8 @@
     },
     {
         "theme": "Temps modernes",
-        "event": "Windows vista",
-        "date": "2001",
+        "event_title": "Windows vista",
+        "date": 2001,
         "description": "",
         "questions": [
             {
@@ -302,13 +388,15 @@
                         "text": "Ne rien faire.",
                         "next_event_title": "Greta",
                         "solution": "F\u00e9licitation Windows Vista ne conna\u00eet pas le jour.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 10
                     },
                     {
                         "text": "Sortir une version interm\u00e9diaire",
                         "next_event_title": "Fin vista ",
                         "solution": "le jeux plante et il recommence ",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -6
                     }
                 ]
             }
@@ -320,8 +408,8 @@
     },
     {
         "theme": "Middle Age",
-        "event": "J\u00e9sus marche sur les eaux",
-        "date": "20",
+        "event_title": "J\u00e9sus marche sur les eaux",
+        "date": 20,
         "description": "",
         "questions": [
             {
@@ -355,8 +443,8 @@
     },
     {
         "theme": "Aujourd'hui",
-        "event": "Greta",
-        "date": "2020",
+        "event_title": "Greta",
+        "date": 2020,
         "description": "Greta Thunberg est une militante \u00e9cologiste su\u00e9doise pour la lutte contre le r\u00e9chauffement\n",
         "questions": [
             {
@@ -372,13 +460,15 @@
                         "text": "Je commence \u00e0 manifester seul tous les vendredi devant mon \u00e9cole ",
                         "next_event_title": "Explosion",
                         "solution": "Le monde prends en compte l'urgence climatique et commence \u00e0 chercher une solution",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 11
                     },
                     {
                         "text": "Je me rends en cours pour m\u2019\u00e9duquer",
                         "next_event_title": "Fin sans humain",
                         "solution": "Le monde devient invivable les humains sont extermin\u00e9",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -1
                     }
                 ]
             }
@@ -390,8 +480,8 @@
     },
     {
         "theme": "Futur",
-        "event": "Explosion",
-        "date": "2030",
+        "event_title": "Explosion",
+        "date": 2030,
         "description": "END ",
         "questions": [
             {
@@ -407,13 +497,15 @@
                         "text": "Oui",
                         "next_event_title": "3\u00e8me guerre mondial",
                         "solution": "Un missile nucl\u00e9aire est envoy\u00e9. La 3\u00e8me guerre mondiale est lanc\u00e9",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": -1
                     },
                     {
                         "text": "Non",
                         "next_event_title": "Fin avec l'humanit\u00e9 sans guerre",
                         "solution": "La 3\u00e8me guerre mondiale est \u00e9vit\u00e9",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -5
                     }
                 ]
             }
@@ -425,8 +517,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Pomp\u00e9i ensevelie sous le v\u00e9suve",
-        "date": "79",
+        "event_title": "Pomp\u00e9i ensevelie sous le v\u00e9suve",
+        "date": 79,
         "description": "",
         "questions": [
             {
@@ -460,8 +552,8 @@
     },
     {
         "theme": "BigBang",
-        "event": "Big Bang",
-        "date": "-400000000",
+        "event_title": "Big Bang",
+        "date": -400000000,
         "description": "",
         "questions": [
             {
@@ -477,13 +569,15 @@
                         "text": "Oh oui!",
                         "next_event_title": "",
                         "solution": "F\u00e9licitations! L'univers est cr\u00e9e!\nTout se passe \u00e0 merveille jusqu'\u00e0 maintenant.",
-                        "type": "good"
+                        "type": "good",
+                        "next_event_id": 15
                     },
                     {
                         "text": "Non pas vraiment",
                         "next_event_title": "Fin triste",
                         "solution": "Malheureusement, pas de Big Bang, pas de vie...\nL'humanit\u00e9 ne verra jamais le jour...\nMais qui dit pas d'humanit\u00e9, dit pas de guerre. Est-ce donc une victoire ?",
-                        "type": "bad"
+                        "type": "bad",
+                        "next_event_id": -4
                     }
                 ]
             }
@@ -495,8 +589,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Invention et utilisation de la poudre \u00e0 canon",
-        "date": "1460",
+        "event_title": "Invention et utilisation de la poudre \u00e0 canon",
+        "date": 1460,
         "description": "",
         "questions": [
             {
@@ -530,8 +624,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": " Cr\u00e9ation des premi\u00e8res formes de vies",
-        "date": "-3800000000",
+        "event_title": " Cr\u00e9ation des premi\u00e8res formes de vies",
+        "date": -380000000,
         "description": "",
         "questions": [
             {
@@ -565,8 +659,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": "",
-        "date": "-2000000000",
+        "event_title": "Sortie de l'eau des poissons",
+        "date": -200000000,
         "description": "",
         "questions": [
             {
@@ -600,8 +694,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": "",
-        "date": "-250000000",
+        "event_title": "M\u00e9t\u00e9orite",
+        "date": -65000000,
         "description": "",
         "questions": [
             {
@@ -635,8 +729,8 @@
     },
     {
         "theme": "Pr\u00e9histoire",
-        "event": " L\u2019\u00e9volution des singes",
-        "date": "-10000",
+        "event_title": " L\u2019\u00e9volution des singes",
+        "date": -10000,
         "description": "",
         "questions": [
             {
@@ -670,8 +764,8 @@
     },
     {
         "theme": "Antiquit\u00e9",
-        "event": "Chute de l\u2019empire romain d\u2019occident",
-        "date": "476",
+        "event_title": "Chute de l\u2019empire romain d\u2019occident",
+        "date": 476,
         "description": "",
         "questions": [
             {
@@ -705,8 +799,8 @@
     },
     {
         "theme": "Moyen-\u00c2ge",
-        "event": "Christophe Colomb d\u00e9couvre l\u2019Am\u00e9rique",
-        "date": "1492",
+        "event_title": "Christophe Colomb d\u00e9couvre l\u2019Am\u00e9rique",
+        "date": 1492,
         "description": "",
         "questions": [
             {
