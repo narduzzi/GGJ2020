@@ -22,7 +22,7 @@ def welcome():
 
 @app.route('/')
 def index():
-    return render_template("question_creator.html")
+    return welcome()
 
 
 @app.route('/annotate')
