@@ -51,7 +51,7 @@
     var event1 = "";
 
     function get_random_events() {
-        $.get("http://192.168.0.193:8080/fetch_unasked", function (data, textStatus, jQxhr) {
+        $.get("http://35.238.231.226:8080/fetch_unasked", function (data, textStatus, jQxhr) {
             console.log(data);
             event1 = data
             var input1 = document.getElementById("event1");
@@ -65,7 +65,7 @@
 
     function submit_event() {
         $.ajax({
-            url: 'http://192.168.0.193:8080/submit_question',
+            url: 'http://35.238.231.226:8080/submit_question',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -75,7 +75,7 @@
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/';
+                window.location = 'http://35.238.231.226:8080/';
 
             },
             error: function (jqXhr, textStatus, errorThrown) {

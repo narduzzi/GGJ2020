@@ -57,7 +57,7 @@
     var event2 = "";
 
     function get_random_events() {
-        $.get("http://192.168.0.193:8080/get_random_events?event1=fake&event2=fake", function(data, textStatus, jQxhr) {
+        $.get("http://35.238.231.226:8080/get_random_events?event1=fake&event2=fake", function(data, textStatus, jQxhr) {
             console.log(data);
             event1 = data[0]
             event2 = data[1]
@@ -71,7 +71,7 @@
 
     function submit_event() {
         $.ajax({
-            url: 'http://192.168.0.193:8080/submit_event',
+            url: 'http://35.238.231.226:8080/submit_event',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -84,7 +84,7 @@
             }),
             processData: false,
             success: function(data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/annotate';
+                window.location = 'http://35.238.231.226:8080/annotate';
 
             },
             error: function(jqXhr, textStatus, errorThrown) {

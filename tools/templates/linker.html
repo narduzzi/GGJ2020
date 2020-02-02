@@ -91,7 +91,7 @@
 
     function showEvent(id) {
         response_div.style.visibility = 'visible';
-        $.get("http://192.168.0.193:8080/get_event?id=" + id, function (data, textStatus, jQxhr) {
+        $.get("http://35.238.231.226:8080/get_event?id=" + id, function (data, textStatus, jQxhr) {
             console.log(data);
             response_a.innerText = data["answers"][0]["responses"][0]["text"];
             response_b.innerText = data["answers"][0]["responses"][1]["text"];
@@ -101,7 +101,7 @@
     }
 
     function get_related_events() {
-        $.get("http://192.168.0.193:8080/get_all_events?key=date", function (data, textStatus, jQxhr) {
+        $.get("http://35.238.231.226:8080/get_all_events?key=date", function (data, textStatus, jQxhr) {
             console.log(data);
             var dropdown_question = document.getElementById("dropdown-questions");
             for (i = 0; i < data.length; i++) {
@@ -135,7 +135,7 @@
 
 
         $.ajax({
-            url: 'http://192.168.0.193:8080/submit_link',
+            url: 'http://35.238.231.226:8080/submit_link',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -146,7 +146,7 @@
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/linker';
+                window.location = 'http://35.238.231.226:8080/linker';
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);

@@ -105,7 +105,7 @@
     get_themes()
 
     function get_themes(){
-        $.get("http://192.168.0.193:8080/get_themes", function (data, textStatus, jQxhr) {
+        $.get("http://35.238.231.226:8080/get_themes", function (data, textStatus, jQxhr) {
            var dropdown_question = document.getElementById("theme");
             for (i = 0; i < data.length; i++) {
                 var text = data[i]["theme"];
@@ -118,7 +118,7 @@
 
     function submit_event() {
         $.ajax({
-            url: 'http://192.168.0.193:8080/new_event',
+            url: 'http://35.238.231.226:8080/new_event',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -149,7 +149,7 @@
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/question_creator?event_title=' + data["next_event_title"];
+                window.location = 'http://35.238.231.226:8080/question_creator?event_title=' + data["next_event_title"];
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
