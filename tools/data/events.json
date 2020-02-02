@@ -575,7 +575,7 @@
         "questions": [
             {
                 "id": 0,
-                "text": "Aimes-tu les explosions ? "
+                "text": "Aimez-vous les explosions ? "
             }
         ],
         "answers": [
@@ -744,7 +744,7 @@
         "questions": [
             {
                 "id": 0,
-                "text": "Es-tu hypocondriaque ?"
+                "text": "Etes-vous hypocondriaque ?"
             }
         ],
         "answers": [
