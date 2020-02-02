@@ -14,31 +14,76 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 
 <body class="text-center">
 
 <div>
-    <p>Given the following event:</p>
+    <p>Étant donnée l'évènement suivant:</p>
 </div>
 
 <div>
-    <p id="event1">{{event1}}</p>
+    <p><b id="event1"></b></p>
 </div>
 
 <div>
-    <p>Find an event that leads to :</p>
+    <p>Trouvez un évènement qui mènera à l'évènemet suivant:</p>
 </div>
 
 <div>
-    <p id="event2">{{event2}}</p>
+    <p><b id="event2"></b></p>
 </div>
 
 <div>
-    <input id="input" placeholder="event">
-    <input id="date" placeholder="date">
+    <input id="input" placeholder="event description">
+    <input id="date" type="number" placeholder="date">
 </div>
+
+<button class="btn btn-primary" onclick="submit_event()">
+    Submit
+</button>
 
 </body>
+<script>
+
+    get_random_events()
+    var event1 = "";
+    var event2 = "";
+
+    function get_random_events() {
+        $.get("http://192.168.0.193:8080/get_random_events", function (data, textStatus, jQxhr) {
+            console.log(data);
+            event1 = data[0]
+            event2 = data[1]
+            var input1 = document.getElementById("event1");
+            input1.innerText = event1["event"] + "(" + event1["date"] + ")";
+            var input2 = document.getElementById("event2");
+            console.log(input2)
+            input2.innerText = event2["event"] + "(" + event2["date"] + ")";
+        });
+    }
+
+    function submit_event() {
+        $.ajax({
+            url: 'http://192.168.0.193:8080/submit_event',
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "event": $('#input').val(), "date": $('#date').val(), "tag":"real",
+                "event1":event1,"event2":event2
+            }),
+            processData: false,
+            success: function (data, textStatus, jQxhr) {
+                window.location = 'http://192.168.0.193:8080/';
+
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+    }
+</script>
 </html>

@@ -20,64 +20,64 @@
 
 <body class="text-center">
 <div>
-    <h4>Create a question</h4>
+    <h4>Link a question</h4>
     <br>
     <div>
-        <a>Theme</a>
-        <input id="theme">
+        <a>Question</a>
+        <select id="dropdown-questions">
+        </select>
     </div>
-    <br>
+
     <div>
-        <a>Title</a>
-        <input id="title" placeholder="Title of the event" value="{{event_title}}">
-    </div>
-    <br>
-    <div>
-        <a>Date</a>
-        <input id="date" placeholder="Date of the event" type="number">
-    </div>
-    <br>
-    <div>
-        <textarea id="description" placeholder="Summary of the event (description)" style="width:400px"></textarea>
-    </div>
-    <br>
-    <div>
-        <textarea id="question" placeholder="Write your question related to the event" style="width:400px"></textarea>
-    </div>
-    <div>
+        <a>Answers</a>
+        <p>Good:</p>
+        <p id="answerA"></p>
+        <select name="lead_a">
+            <option value="volvo">Volvo</option>
+        </select>
         <br>
-        <h5>GOOD</h5>
-        <div>
-            <a>Response</a> <input id="good-res" placeholder="Good answer">
-            <a>Lead to event</a> <input id="good-event" placeholder="Good event title">
-        </div>
-        <br>
-        <h5>BAD</h5>
-        <div>
-            <a>Response</a> <input id="bad-res" placeholder="Good answer">
-            <a>Lead to event</a> <input id="bad-event" placeholder="Good event title">
-        </div>
+        <p>Bad:</p>
+        <p id="answerB"></p>
+        <select name="lead_b">
+            <option value="volvo">Volvo</option>
+        </select>
+    </div>
+
+    <br>
+    <div>
+        <button class="btn btn-primary" onclick="submit_link()">
+            Submit
+        </button>
     </div>
 </div>
-
-<br>
-<div>
-    <button class="btn btn-primary" onclick="submit_event()">
-        Submit
-    </button>
-</div>
-
 </body>
-<script>
 
-    function submit_event() {
+<script>
+    get_related_events()
+
+    function get_related_events() {
+        $.get("http://192.168.0.193:8080/get_related_event", function (data, textStatus, jQxhr) {
+            console.log(data);
+            var dropdown_question = document.getElementById("dropdown-questions");
+            for (i = 0; i < data.length; i++) {
+                var question_text = data[i]["questions"][0]["text"];
+                var option = document.createElement("option");
+                option.setAttribute("value", "event-" + i + "-question-0");
+                option.innerText = question_text;
+                dropdown_question.appendChild(option)
+            }
+        })
+    }
+
+
+    function submit_link() {
         $.ajax({
-            url: 'http://192.168.0.193:8080/new_event',
+            url: 'http://192.168.0.193:8080/submit_link',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                "theme": $('#theme').val(),
+                "question_id": $('#theme').val(),
                 "event": $('#input').val(),
                 "date": $('#date').val(),
                 "description": $('#description').val(),

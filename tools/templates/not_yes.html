@@ -21,7 +21,7 @@
 <body class="text-center">
 
 <div>
-    <p>Given the following event:</p>
+    <p>Given the following (fake) event:</p>
 </div>
 
 <div>
@@ -29,7 +29,7 @@
 </div>
 
 <div>
-    <p>Find an event that leads to :</p>
+    <p>Describe an event that leads to :</p>
 </div>
 
 <div>
@@ -53,7 +53,7 @@
     var event2 = "";
 
     function get_random_events() {
-        $.get("http://192.168.0.193:8080/get_random_events", function (data, textStatus, jQxhr) {
+        $.get("http://192.168.0.193:8080/get_random_events?event1=fake&event2=real", function (data, textStatus, jQxhr) {
             console.log(data);
             event1 = data[0]
             event2 = data[1]

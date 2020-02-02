@@ -1,0 +1,35 @@
+[
+  {
+    "id": 0,
+    "title": "The Big Bang",
+    "date": -1000000000,
+    "question": "Do you like big explosions ?",
+    "answers": [
+      {
+        "text": "Yes",
+        "redirect": 1
+      },
+      {
+        "text": "No",
+        "redirect": 2
+      }
+    ],
+    "redirect_on_this": []
+  }
+]
+
+
+
+
+//C1
+Given this question :
+" Do you like big explosions?"
+
+Give an answer that will lead to: "The death of Kennedy"
+
+//C2
+Given a question about "The death of Kennedy"
+Q
+R
+
+that will lead to "The creation of internet"

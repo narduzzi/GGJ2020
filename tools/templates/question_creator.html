@@ -19,73 +19,89 @@
 
 
 <body class="text-center">
-<div style="height:200px"></div>
 <div>
-    <h4>Given the following subject:</h4>
-</div>
-
-<div>
-    <h3 style="color:green"><b id="event1"></b></h3>
-</div>
-
-<div style="height: 50px"></div>
-<div>
+    <h4>Create a question</h4>
+    <br>
     <div>
-        <h4>Write a funny question about it! </h4>
+        <a>Theme</a>
+        <input id="theme">
     </div>
-    <textarea id="question" placeholder="Write your question..." style="width: 400px"></textarea>
+    <br>
+    <div>
+        <a>Title</a>
+        <input id="title" placeholder="Title of the event" value="{{event_title}}">
+    </div>
+    <br>
+    <div>
+        <a>Date</a>
+        <input id="date" placeholder="Date of the event" type="number">
+    </div>
+    <br>
+    <div>
+        <textarea id="description" placeholder="Summary of the event (description)" style="width:400px"></textarea>
+    </div>
+    <br>
+    <div>
+        <textarea id="question" placeholder="Write your question related to the event" style="width:400px"></textarea>
+    </div>
+    <div>
+        <br>
+        <h5>GOOD</h5>
+        <div>
+            <a>Response</a> <input id="good-res" placeholder="Good answer">
+            <a>Lead to event</a> <input id="good-event" placeholder="Good event title">
+        </div>
+        <br>
+        <h5>BAD</h5>
+        <div>
+            <a>Response</a> <input id="bad-res" placeholder="Good answer">
+            <a>Lead to event</a> <input id="bad-event" placeholder="Good event title">
+        </div>
+    </div>
 </div>
 
-<div style="height: 100px"></div>
+<br>
 <div>
-    <h5>Example:</h5>
-    <p>Event : <b>"The big bang"</b></p>
-    <p>Question : <b>"Do you like big explosions?"</b></p>
+    <button class="btn btn-primary" onclick="submit_event()">
+        Submit
+    </button>
 </div>
-
-<div style="height: 50px"></div>
-<button class="btn btn-primary" onclick="submit_event()">
-    Submit
-</button>
 
 </body>
 <script>
 
-    get_random_events()
-    var event1 = "";
-    var event2 = "";
-    var event3 = "";
-
-    function get_random_events() {
-        $.get("http://192.168.0.193:8080/get_question", function (data, textStatus, jQxhr) {
-            console.log(data);
-            event1 = data[0]
-            event2 = data[1]
-            event3 = data[2]
-            var input1 = document.getElementById("event1");
-            input1.innerText = event1["event"] + " (year " + event1["date"] + ")";
-            var input2 = document.getElementById("event2");
-            input2.innerText = event2["event"] + " (year " + event2["date"] + ")";
-            var input3 = document.getElementById("event3");
-            input3.innerText = event3["event"] + " (year " + event3["date"] + ")";
-
-        });
-    }
-
     function submit_event() {
         $.ajax({
-            url: 'http://192.168.0.193:8080/submit_event',
+            url: 'http://192.168.0.193:8080/new_event',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                "event": $('#input').val(), "date": $('#date').val(), "tag": "real",
-                "event1": event1, "event2": event2
+                "theme": $('#theme').val(),
+                "event": $('#title').val(),
+                "date": $('#date').val(),
+                "description": $('#description').val(),
+                "questions": [{"id": 0, "text": $('#question').val()}],
+                "answers": [{
+                    "question_id": 0,
+                    "responses": [{
+                        "text": $('#good-res').val(),
+                        "next_event_title": $('#good-event').val(),
+                        "type": "good"
+                    },
+                        {
+                            "text": $('#bad-res').val(),
+                            "next_event_title": $('#bad-event').val(),
+                            "type": "bad"
+                        }]
+                }],
+                "tag": "real",
+                "next_ids": [],
+                "previous_ids": []
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/';
-
+                window.location = 'http://192.168.0.193:8080/question_creator?event_title=' + data["next_event_title"];
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);

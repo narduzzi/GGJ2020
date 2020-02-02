@@ -1,22 +1,310 @@
 [
   {
-    "id": 0,
-    "theme": "BigBang"
+    "theme": "The Big Bang",
+    "event": "The Big Bang",
+    "date": -4000000000,
+    "questions": [
+      {
+        "id": 0,
+        "text": "Il y a une petite boule de gaz. Que faites-vous?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Je souffle dessus pour l'éteindre.",
+            "next_event_title": "R\u00e9volution n\u00e9olithique",
+            "solution": "Vous empêchez le Big Bang",
+            "next_event_id": 0,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "J'aime regarder les grosses explosion et ne fait rien.",
+            "next_event_title": "R\u00e9volution n\u00e9olithique",
+            "solution": "Le Big Bang se réalise.",
+            "next_event_id": 1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "id": 0
   },
   {
-    "id": 1,
-    "theme": "Prehistory"
+    "theme": "",
+    "event": "R\u00e9volution n\u00e9olithique",
+    "date": "-8000",
+    "description": "",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Vous d\u00e9couvrez la possibilit\u00e9 de cultiver des plantes dans votre jardin, que d\u00e9cidez-vous d\u2019y faire planter ?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Des l\u00e9gumes pour nourrir les plus affam\u00e9s",
+            "next_event_title": "Invention de l\u2019\u00e9criture",
+            "solution": "La population se développe. Les nutriments apportés par la nourriture améliore les capacités cognitive des habitants de la terre.",
+            "next_event_id": 2,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Du haschisch pour me mettre bien",
+            "next_event_title": "Fin du monde par la famine",
+            "solution": "La race humaine disparaït à la suite d'une famine sans précédents.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 1
   },
   {
-    "id": 2,
-    "theme": "Middle Age"
+    "theme": "Pr\u00e9histoire",
+    "event": "Invention de l\u2019\u00e9criture",
+    "date": "-3000",
+    "description": "",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Un homme \u00e9trange vient vers vous vous proposant un moyen de stocker de l\u2019information en appliquant une pression sur des tablettes d\u2019argile. Il d\u00e9cide d\u2019appeler cela l\u2019\u00e9criture !"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Vous le f\u00e9licitez et proposez de l\u2019aider dans ses recherches",
+            "next_event_title": "Premier jeux olympiques",
+            "solution": "L'accès à l'écriture développe la culture.",
+            "next_event_id": 3,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "L\u2019\u00e9cri-quoi ?! \u00e7a ne marchera jamais\u2026 Le d\u00e9noncer \u00e0 la police locale",
+            "next_event_title": "Fin chaotique car personne ne sait ni \u00e9crire ni lire",
+            "solution": "Personne ne sait lire et écrire, la culture de la race humaine s'effondre et Twitter n'est plus qu'un repère de mèmes sans texte.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 2
   },
   {
-    "id": 3,
-    "theme": "Modern Age"
+    "theme": "Pr\u00e9histoire",
+    "event": "Premier jeux olympiques",
+    "date": "-776",
+    "description": "Le peuple accours pour assister \u00e0 un \u00e9v\u00e9nement r\u00e9unissant les meilleurs athl\u00e8tes de toute la gr\u00e8ce.",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Et vous?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Je m\u2019inscris en athl\u00e9tisme, apr\u00e8s tout j\u2019ai une form olympique !",
+            "next_event_title": "Fondation de Rome",
+            "solution": "Le divertissement empêche la population de se révolter. L'Empire romain se développe et règne sur plusieurs siècles.",
+            "next_event_id": 4,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Je me contente d\u2019y assister avec mon moussaka fait maison",
+            "next_event_title": "Fin sans humanit\u00e9, car \u00e9pid\u00e9mie de gastro d\u00fbe \u00e0 la moussaka",
+            "solution": "La race humaine s'éteint suite à une épidémie de gastro liée à une moussaka.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 3
   },
   {
-    "id": 4,
-    "theme": "Contemporary"
+    "theme": "Pr\u00e9histoire",
+    "event": "Fondation de Rome",
+    "date": "-753",
+    "description": "Un jeune inconnu vient vous demander conseil. Il dit que son fr\u00e8re a d\u00e9pass\u00e9 les limites des son territoire en sautant par dessus une cl\u00f4ture.",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Quel ch\u00e2timent lui infliger ?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Faire la paix, c\u2019est bien parfois aussi",
+            "next_event_title": "Assassinat de Jules C\u00e9sar",
+            "solution": "Rome se développe dans la prospérité",
+            "next_event_id": 5,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Le tuer sur le champ !",
+            "next_event_title": "Fin chaotique, car deux nations s\u2019affrontent en permanence",
+            "solution": "Rome n'est pas bâtie et deux camps passent plusieurs siècles à s'entre-détruire.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 4
+  },
+  {
+    "theme": "Pr\u00e9histoire",
+    "event": "Assassinat de Jules C\u00e9sar",
+    "date": "-44",
+    "description": "",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Une poign\u00e9e d\u2019hommes m\u00e9contents d\u00e9cide de renverser l\u2019\u00e9tat en assassinant son dirigeant principal. Que faites-vous ?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Vous le poignardez comme si vous \u00e9tiez son propre fils",
+            "next_event_title": "J\u00e9sus",
+            "solution": "Jules César meurt.",
+            "next_event_id": 6,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Je m\u2019interpose, son nom me rappelle celle d\u2019une salade",
+            "next_event_title": "Fin dictatoriale, une dictature sans pr\u00e9c\u00e9dent s\u2019est mise en place",
+            "solution": "Un dictateur du nom de Jules César prend le pouvoir et instaure un régime sanglant et violent.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 5
+  },
+  {
+    "theme": "Moyen-Age",
+    "event": "J\u00e9sus marche sur les eaux",
+    "date": "30",
+    "description": "",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Vous vous retrouvez sous l\u2019eau, proche d\u2019un rivage. Inexplicablement, sentez qu\u2019on vous marche sur la t\u00eate. Que faits vous ?"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Je ne sais pas ce qui se passe mais je pr\u00e9f\u00e8re rester discret et faire la statue.",
+            "next_event_title": "",
+            "solution": "Jésus réussit son miracle et la religion chrétienne est née.",
+            "next_event_id": 7,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Il se prend pour qui lui ? Je m\u2019empresse de le faire tomber dans l\u2019eau !",
+            "next_event_title": "La religion chr\u00e9tienne n'est pas cr\u00e9\u00e9e. Les papes et les croisades n'existent pas. Des millions de morts sont \u00e9pargn\u00e9s. ",
+            "solution": "La religion chrétienne n'est pas créée. Les papes et les croisades n'existent pas. Des millions de morts sont épargnés mais la surpopulation aura raison de la race humaine.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 6
+  },
+  {
+    "theme": "Moyen-Age",
+    "event": "Pomp\u00e9i est ensevelie",
+    "date": "79",
+    "description": "",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Vous vous retrouvez au sommet d\u2019un volcan en \u00e9ruption. Une fum\u00e9e dense vous \u00e9touffe petit \u00e0 petit et au loin, vous apercevez une ville en panique dont les habitans sont br\u00fbl\u00e9s petit \u00e0 petit par les coul\u00e9es de laves. Le temps vous est compt\u00e9, que faites-vous ?!"
+      }
+    ],
+    "answers": [
+      {
+        "question_id": 0,
+        "responses": [
+          {
+            "text": "Je dois absolument repartir d\u2019ici ! Je pr\u00e9pare un nouveau voyage et m\u2019en vais aussit\u00f4t !",
+            "next_event_title": "Pomp\u00e9i est ensevelie",
+            "solution": "Pompei est ensevelie.",
+            "next_event_id": 8,
+            "type": "good",
+            "meta": {}
+          },
+          {
+            "text": "Je me d\u00e9cider \u00e0 sauver ces pauvres gens. Je baisse mon pantalon et urine directement dans le coeur du volcan.",
+            "next_event_title": "Vous perdez le jeu car vous \u00eates tomb\u00e9s dans le volcan.",
+            "solution": "Vous perdez le jeu car vous êtes tombés dans le volcan.",
+            "next_event_id": -1,
+            "type": "bad",
+            "meta": {}
+          }
+        ]
+      }
+    ],
+    "tag": "real",
+    "next_ids": [],
+    "previous_ids": [],
+    "id": 7
   }
 ]

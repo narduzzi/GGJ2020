@@ -21,26 +21,21 @@
 <body class="text-center">
 <div style="height:200px"></div>
 <div>
-    <h4>Given the following subject:</h4>
+    <h4 color="blue" id="event1"></h4>
 </div>
 
 <div>
-    <h3 style="color:green"><b id="event1"></b></h3>
+    <h3 style="color:green" id="question"></h3>
 </div>
 
 <div style="height: 50px"></div>
 <div>
     <div>
-        <h4>Write a funny question about it! </h4>
+        <h4>What answer can lead to : </h4>
     </div>
-    <textarea id="question" placeholder="Write your question..." style="width: 400px"></textarea>
-</div>
-
-<div style="height: 100px"></div>
-<div>
-    <h5>Example:</h5>
-    <p>Event : <b>"The big bang"</b></p>
-    <p>Question : <b>"Do you like big explosions?"</b></p>
+     <div>
+        <h4 id="event2"></h4>
+    </div>
 </div>
 
 <div style="height: 50px"></div>
@@ -63,7 +58,10 @@
             event2 = data[1]
             event3 = data[2]
             var input1 = document.getElementById("event1");
-            input1.innerText = event1["event"] + " (year " + event1["date"] + ")";
+            input1.innerText = "Given the following question about "+ event1["event"] + " (year " + event1["date"] + "):";
+             var question = document.getElementById("question");
+            question.innerText = event1["question"];
+
             var input2 = document.getElementById("event2");
             input2.innerText = event2["event"] + " (year " + event2["date"] + ")";
             var input3 = document.getElementById("event3");

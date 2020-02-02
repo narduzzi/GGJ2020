@@ -19,28 +19,31 @@
 
 
 <body class="text-center">
-
+<div style="height:200px"></div>
 <div>
-    <p>Given the following event:</p>
+    <h4>Given the following subject:</h4>
 </div>
 
 <div>
-    <p><b id="event1"></b></p>
+    <h3 style="color:green"><b id="event1"></b></h3>
 </div>
 
+<div style="height: 50px"></div>
 <div>
-    <p>Find an event that leads to :</p>
+    <div>
+        <h4>Write a funny question about it! </h4>
+    </div>
+    <textarea id="question" placeholder="Write your question..." style="width: 400px"></textarea>
 </div>
 
+<div style="height: 100px"></div>
 <div>
-    <p><b id="event2"></b></p>
+    <h5>Example:</h5>
+    <p>Event : <b>"The big bang"</b></p>
+    <p>Question : <b>"Do you like big explosions?"</b></p>
 </div>
 
-<div>
-    <input id="input" placeholder="event description">
-    <input id="date" type="number" placeholder="date">
-</div>
-
+<div style="height: 50px"></div>
 <button class="btn btn-primary" onclick="submit_event()">
     Submit
 </button>
@@ -51,17 +54,21 @@
     get_random_events()
     var event1 = "";
     var event2 = "";
+    var event3 = "";
 
     function get_random_events() {
-        $.get("http://192.168.0.193:8080/get_random_events", function (data, textStatus, jQxhr) {
+        $.get("http://192.168.0.193:8080/get_question", function (data, textStatus, jQxhr) {
             console.log(data);
             event1 = data[0]
             event2 = data[1]
+            event3 = data[2]
             var input1 = document.getElementById("event1");
-            input1.innerText = event1["event"] + "(" + event1["date"] + ")";
+            input1.innerText = event1["event"] + " (year " + event1["date"] + ")";
             var input2 = document.getElementById("event2");
-            console.log(input2)
-            input2.innerText = event2["event"] + "(" + event2["date"] + ")";
+            input2.innerText = event2["event"] + " (year " + event2["date"] + ")";
+            var input3 = document.getElementById("event3");
+            input3.innerText = event3["event"] + " (year " + event3["date"] + ")";
+
         });
     }
 
@@ -72,8 +79,8 @@
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify({
-                "event": $('#input').val(), "date": $('#date').val(), "tag":"real",
-                "event1":event1,"event2":event2
+                "event": $('#input').val(), "date": $('#date').val(), "tag": "real",
+                "event1": event1, "event2": event2
             }),
             processData: false,
             success: function (data, textStatus, jQxhr) {

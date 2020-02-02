@@ -21,103 +21,26 @@
 <body class="text-center">
 <div style="height:200px"></div>
 <div>
-    <h4 id="question"></h4>
+    <h4 id="question">{{question}}</h4>
 </div>
 
 <br>
 <div id="answers">
-
+    {% for i,b in buttons %}
+    <button class="btn btn-primary" id="button-{{i}}" onclick="redirect({{i}},0, {{current_id}})">{{ b["text"] }}</button>
+    {% endfor %}
 </div>
 
 <br>
 <div id="solution">
 
 </div>
-
-</body>
 <script>
+    function redirect(response_id, question_id, current_id) {
+        var question_id = 0;
 
-    get_question(0, 0)
-    var current_question = 0;
-    var response_id = 0;
-    var question_id = 0;
-    var question = document.getElementById("question");
-    var answers = document.getElementById("answers");
-    var solution = document.getElementById("solution");
-
-    function clearQuestion() {
-        question.innerText="";
-        answers.innerHTML="";
-    }
-
-    function displaySolution(e) {
-        clearQuestion();
-        var next_event_id = e.srcElement.id;
-        var response_id = e.srcElement.name;
-        var value = e.srcElement.value;
-        var solution_text = value;
-
-        solution.innerText = solution_text;
-        var button = document.createElement("button");
-        button.innerText = "Continue";
-        button.setAttribute("class", "btn btn-success");
-        button.addEventListener("click", function (e) {
-            get_question(next_event_id, response_id)
-        })
-        solution.appendChild(document.createElement("br"))
-        solution.appendChild(button)
-    }
-
-    function get_question(current_event, response_id) {
-        $.get("http://192.168.0.193:8080/get_next_question?question_id=0&current_id=" + current_event + "&response_id=" + response_id, function (data, textStatus, jQxhr) {
-
-            var question_text = data["questions"][0]["text"];
-            solution.innerHTML="";
-
-            question.innerText = question_text;
-
-            for (i = 0; i < data["answers"][0]["responses"].length; i++) {
-                var answer = data["answers"][0]["responses"][i]
-                var response_div = document.createElement("div")
-                var button = document.createElement("button")
-                button.innerText = answer["text"]
-                button.setAttribute("next-id", answer["next_event_id"])
-                button.setAttribute("class", "btn btn-primary")
-                button.setAttribute("id", answer["next_event_id"])
-                button.setAttribute("value", answer["solution"])
-                button.setAttribute("name", i)
-                // button.setAttribute()
-                button.addEventListener("click", function (e) {
-                    displaySolution(e)
-                });
-                response_div.appendChild(button)
-                answers.appendChild(response_div)
-                answers.appendChild(document.createElement("br"))
-
-            }
-
-        });
-    }
-
-    function submit_event() {
-        $.ajax({
-            url: 'http://192.168.0.193:8080/submit_event',
-            dataType: 'json',
-            type: 'post',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                "event": $('#input').val(), "date": $('#date').val(), "tag": "real",
-                "event1": event1, "event2": event2
-            }),
-            processData: false,
-            success: function (data, textStatus, jQxhr) {
-                window.location = 'http://192.168.0.193:8080/';
-
-            },
-            error: function (jqXhr, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
+        location.href = "http://0.0.0.0:5000/display_answer?current_id=" + current_id + "&question_id=" + question_id + "&response_id=" + response_id
     }
 </script>
+</body>
 </html>
